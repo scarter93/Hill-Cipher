@@ -1,0 +1,62 @@
+-- entity name: matrix_mult
+-- Stephen Carter - 260500858
+
+-- Copyright (C) 2015 Stephen Carter
+-- Version 1.0 
+-- Author: Stephen Carter; stephen.carter@mail.mcgill.ca
+-- Date: Jan. 07, 2016
+
+-- This circuit determines when two 7-bit numbers, A and B, are equal.
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;		-- arithmetic operators
+use ieee.std_logic_unsigned.all;	-- Treat vectors as unsigned
+
+entity matrix_mult is
+	port(	p1	:	in std_logic_vector(3 downto 0);
+			p2	:	in std_logic_vector(3 downto 0);
+			p3	:	in std_logic_vector(3 downto 0);
+			
+			k11	:	in std_logic_vector(3 downto 0);
+			k12	:	in std_logic_vector(3 downto 0);
+			k13	:	in std_logic_vector(3 downto 0);
+			
+			k21	:	in std_logic_vector(3 downto 0);
+			k22	:	in std_logic_vector(3 downto 0);
+			k23	:	in std_logic_vector(3 downto 0);
+			
+			k31	:	in std_logic_vector(3 downto 0);
+			k32	:	in std_logic_vector(3 downto 0);
+			k33	:	in std_logic_vector(3 downto 0);
+			
+			clk	:	in std_logic;
+			
+			c1	:	out std_logic_vector(3 downto 0);
+			c2 :	out std_logic_vector(3 downto 0);
+			c3 :	out std_logic_vector(3 downto 0);
+		);
+
+end matrix_mult;
+
+architecture implementation of g48_7bit_comparator is
+	Signal p1_reg,p2_reg,p3_reg	:	std_logic_vector(3 downto 0);
+	Signal c1_reg,c2_reg,c3_reg	:	std_logic_vector(3 downto 0);
+begin
+
+	c1_reg <= (p1_reg*k11) + (p2_reg*k21) + (p3_reg*k31);
+	c2_reg <= (p1_reg*k12) + (p2_reg*k22) + (p3_reg*k32);
+	c3_reg <= (p1_reg*k13) + (p2_reg*k23) + (p3_reg*k33);
+	
+	compute_output : process(clk) begin
+		if(rising_edge(clk)) then
+			p1_reg <= p1;
+			p2_reg <= p2;
+			p3_reg <= p3;
+			
+			c1 <= c1_reg;
+			c2 <= c2_reg;
+			c3 <= c3_reg;		
+		end if;
+	end process;
+
+end implementation;
