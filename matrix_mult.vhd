@@ -6,7 +6,7 @@
 -- Author: Stephen Carter; stephen.carter@mail.mcgill.ca
 -- Date: Jan. 07, 2016
 
--- This circuit determines when two 7-bit numbers, A and B, are equal.
+-- This circuit performs matrix multiplication of a 1x3 vector and a 3x3 matrix(key_loader)
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;		-- arithmetic operators
@@ -33,19 +33,21 @@ entity matrix_mult is
 			
 			c1	:	out std_logic_vector(3 downto 0);
 			c2 :	out std_logic_vector(3 downto 0);
-			c3 :	out std_logic_vector(3 downto 0);
+			c3 :	out std_logic_vector(3 downto 0)
 		);
 
 end matrix_mult;
 
-architecture implementation of g48_7bit_comparator is
-	Signal p1_reg,p2_reg,p3_reg	:	std_logic_vector(3 downto 0);
-	Signal c1_reg,c2_reg,c3_reg	:	std_logic_vector(3 downto 0);
+architecture implementation of matrix_mult is
+	Signal p1_reg,p2_reg,p3_reg		:	std_logic_vector(3 downto 0);
+	Signal c1_reg,c2_reg, c3_reg 	: 	std_logic_vector(7 downto 0);
 begin
 
 	c1_reg <= (p1_reg*k11) + (p2_reg*k21) + (p3_reg*k31);
 	c2_reg <= (p1_reg*k12) + (p2_reg*k22) + (p3_reg*k32);
 	c3_reg <= (p1_reg*k13) + (p2_reg*k23) + (p3_reg*k33);
+	
+
 	
 	compute_output : process(clk) begin
 		if(rising_edge(clk)) then
@@ -53,9 +55,9 @@ begin
 			p2_reg <= p2;
 			p3_reg <= p3;
 			
-			c1 <= c1_reg;
-			c2 <= c2_reg;
-			c3 <= c3_reg;		
+			c1 <= c1_reg(3 downto 0);
+			c2 <= c2_reg(3 downto 0);
+			c3 <= c3_reg(3 downto 0);		
 		end if;
 	end process;
 

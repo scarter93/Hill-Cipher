@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {HillCipher.vho HillCipher_vhd.sdo}}
+	{{"Fast Model"} {HillCipher_fast.vho HillCipher_vhd_fast.sdo}}
+}

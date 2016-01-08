@@ -1,0 +1,70 @@
+% file: 		matrix_multiplier.vec 
+  author: 		Vincent Levesque 
+  date: 		September 7, 2001 
+  description: 	This vector file should be used to simulate the matrix multiplier. 
+
+  note: By default Altera creates a file called matrix_multiplier.scf when simulating these
+        vectors. Make sure that you rename this file appropriately and that you submit
+        one .scf file for each of the two matrix multipliers designed in part 1. %
+                
+% Modification (9/16 by Vincent Levesque)
+  The key was changing on the rising edge of the clock at 450ns. It now changes on
+  the falling edge and all subsequent operations are delayed by a full clock cycle (100ns). %
+
+% time units: ns %
+% input value format: hexadecimal %
+
+% start and stop time %
+START 0;
+STOP 1500;
+
+% clock period = 100 ns %
+INTERVAL 50;
+INPUTS clk;
+PATTERN
+0 1; 				
+
+% Key matrix:  These are the two keys of the first key pair shown
+  in figure 2 of the assignment handout. Call the first key k1 and
+  the second key k2. %
+INPUTS 		k11 k12 k13	k21 k22 k23	k31 k32 k33;
+PATTERN
+0> 			1   2   3   4   5   6   7   8   A
+500> 	 	A   4   1   A   9   E   1   E   1
+;
+
+% Plaintext vector %
+INPUTS 		p1 p2 p3;
+PATTERN
+% Test 1: Encrypt the following 4 vectors using k1. The results 
+          should be (B,B,5), (6,2,B), (0,F,A) and (6,6,E). %
+0> 			1  5  A
+100> 	 	B  4  D
+200> 		0  3  C
+300> 		6  2  8
+% The key changes during the following clock cycle. The result of the computation
+  is irrelevant. The plaintext is set to 'ZZZ' and the resulting ciphertext should
+  be 'XXX'. %
+400> 		Z  Z  Z
+% Test 2: Encrypt the four results of the first test using k2. Since
+          k1 and k2 form a key pair you should obtain the initial four
+		  vectors. %
+500>		B  B  5
+600>		6  2  B
+700>		0  F  A
+800>		6  6  E
+% Test 3: The first two test demonstrate that the matrix multiplier computes
+          correctly. The following test verifies that the plaintext input is
+          registered (i.e. is latched into input registers). The correct 
+		  plaintext (0,F,A) is shown at the input only on the rising edge of the
+		  clock cycle. If the plaintext is registered the computation should result
+		  in (0,3,C). If not the wrong plaintext will be used and the result will be
+		  (6,2,8). %
+940>		0  F  A
+960>		6  6  E
+;
+% Test 4: Verify in all the above cases that the output vector changes only on the rising 
+          edge of the clock cycle. %
+
+% Output %
+OUTPUTS c1 c2 c3;

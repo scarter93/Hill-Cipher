@@ -1,0 +1,2 @@
+LIBRARY lpm;
+USE lpm.lpm_components.all;
