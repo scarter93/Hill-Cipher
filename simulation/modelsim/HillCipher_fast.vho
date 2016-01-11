@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
--- DATE "01/10/2016 14:21:41"
+-- DATE "01/11/2016 16:05:07"
 
 -- 
 -- Device: Altera EP2C5F256C6 Package FBGA256
@@ -415,22 +415,22 @@ SIGNAL \inst1|inst3|lpm_mult_component3|auto_generated|op_1~6_combout\ : std_log
 SIGNAL \inst1|inst3|lpm_add_compontent2|auto_generated|pipeline_dffe[2]~9\ : std_logic;
 SIGNAL \inst1|inst3|lpm_add_compontent2|auto_generated|pipeline_dffe[3]~10_combout\ : std_logic;
 SIGNAL \inst1|c3_reg|dffs[3]~feeder_combout\ : std_logic;
-SIGNAL \inst1|inst3|lpm_add_compontent1|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k12~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k33~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inst1|inst1|lpm_add_compontent1|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \p3~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \p1~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k22~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k23~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inst1|p1_reg|dffs\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \k31~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k32~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \inst1|inst3|lpm_add_compontent2|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \k21~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \p2~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k33~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst1|inst3|lpm_add_compontent1|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \k13~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k32~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \p3~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k23~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k21~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst1|p1_reg|dffs\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst1|inst3|lpm_add_compontent2|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \k11~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k12~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \p1~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \p2~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \k22~combout\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst1|inst1|lpm_add_compontent1|auto_generated|pipeline_dffe\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \inst1|p2_reg|dffs\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \inst1|p3_reg|dffs\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \inst1|c1_reg|dffs\ : std_logic_vector(3 DOWNTO 0);
