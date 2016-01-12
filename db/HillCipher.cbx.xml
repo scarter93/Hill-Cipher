@@ -1,20 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="HillCipher">
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst1|LPM_ADD_SUB:lpm_add_compontent1" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst2|LPM_MULT:lpm_mult_component3" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst3|LPM_MULT:lpm_mult_component2" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst1|LPM_ADD_SUB:lpm_add_compontent2" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst1|LPM_MULT:lpm_mult_component1" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst2|LPM_ADD_SUB:lpm_add_compontent1" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst3|LPM_MULT:lpm_mult_component3" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst1|LPM_MULT:lpm_mult_component2" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst2|LPM_ADD_SUB:lpm_add_compontent2" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst2|LPM_MULT:lpm_mult_component1" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst3|LPM_ADD_SUB:lpm_add_compontent1" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst1|LPM_MULT:lpm_mult_component3" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst2|LPM_MULT:lpm_mult_component2" CBX_FILE_NAME="mult_eno.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst3|LPM_ADD_SUB:lpm_add_compontent2" CBX_FILE_NAME="add_sub_dvg.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|HillCipher|matrix_mult_struct:inst1|vector_mult:inst3|LPM_MULT:lpm_mult_component1" CBX_FILE_NAME="mult_eno.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

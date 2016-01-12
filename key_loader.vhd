@@ -37,7 +37,7 @@ begin
 
 	load : process(clk, load_key)
 		Begin
-				if load_key = '1' AND clk = '1' AND clk'event then
+				if load_key = '1' AND rising_edge(clk) then
 					case state is
 					when 0 =>
 						k11 <= p1;
@@ -57,7 +57,7 @@ begin
 					when 3 =>
 						state <= 0;
 					end case;
-				elsif load_key = '0' AND clk = '1' AND clk'event then
+				elsif load_key = '0' AND rising_edge(clk) then
 					state <= 0;
 				end if;
 	end process;

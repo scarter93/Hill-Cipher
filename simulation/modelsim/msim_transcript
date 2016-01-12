@@ -40,3 +40,21 @@
 # -- Compiling entity matrix_mult_struct
 # -- Compiling architecture structural of matrix_mult_struct
 # 
+vsim rtl_work.hillcipher
+# vsim rtl_work.hillcipher 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading rtl_work.hillcipher(implementation)
+# Loading lpm.lpm_components
+# Loading rtl_work.matrix_mult_struct(structural)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_ff(lpm_syn)
+# Loading rtl_work.vector_mult(structural)
+# Loading lpm.lpm_hint_evaluation(body)
+# Loading lpm.lpm_mult(lpm_syn)
+# Loading ieee.std_logic_signed(body)
+# Loading lpm.lpm_add_sub(lpm_syn)
+# Loading lpm.lpm_add_sub_unsigned(lpm_syn)

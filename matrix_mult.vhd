@@ -41,7 +41,7 @@ end matrix_mult;
 
 architecture implementation of matrix_mult is
 	Signal p1_reg,p2_reg,p3_reg	:	std_logic_vector(3 downto 0);	-- register values for inputs
-	Signal c1_reg,c2_reg, c3_reg 	: 	std_logic_vector(7 downto 0);	-- register values for outputs
+	Signal c1_reg,c2_reg,c3_reg 	: 	std_logic_vector(7 downto 0);	-- register values for outputs
 begin
 
 	c1_reg <= (p1_reg*k11) + (p2_reg*k21) + (p3_reg*k31);				-- preform calculations

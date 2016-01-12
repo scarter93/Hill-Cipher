@@ -1,0 +1,39 @@
+-- entity: key_inverter
+-- author: Stephen Carter
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;		-- arithmetic operators
+use ieee.std_logic_unsigned.all;	-- Treat vectors as unsigned
+
+entity key_inverter is
+
+		port(
+				ek11	:	in std_logic_vector(3 downto 0);
+				ek12	:	in std_logic_vector(3 downto 0);
+				ek13	:	in std_logic_vector(3 downto 0);
+				
+				ek21	:	in std_logic_vector(3 downto 0);
+				ek22	:	in std_logic_vector(3 downto 0);
+				ek23	:	in std_logic_vector(3 downto 0);
+				
+				ek31	:	in std_logic_vector(3 downto 0);
+				ek32	:	in std_logic_vector(3 downto 0);
+				ek33	:	in std_logic_vector(3 downto 0);
+				
+				clk	: 	in std_logic;
+				
+				dk11	:	out std_logic_vector(3 downto 0);
+				dk12	:	out std_logic_vector(3 downto 0);
+				dk13	:	out std_logic_vector(3 downto 0);
+				
+				dk21	:	out std_logic_vector(3 downto 0);
+				dk22	:	out std_logic_vector(3 downto 0);
+				dk23	:	out std_logic_vector(3 downto 0);
+				
+				dk31	:	out std_logic_vector(3 downto 0);
+				dk32	:	out std_logic_vector(3 downto 0);
+				dk33	:	out std_logic_vector(3 downto 0)
+				
+		);
+end key_inverter;
