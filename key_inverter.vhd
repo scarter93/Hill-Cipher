@@ -79,21 +79,6 @@ begin
 			inclock => clk,
 			q => det_minv
 		);
-		
-		det <= det_temp(3 downto 0);
-		
-	
-		dk11 <= dk11_t(3 downto 0);
-		dk12 <= dk12_t(3 downto 0);
-		dk13 <= dk13_t(3 downto 0);
-		
-		dk21 <= dk21_t(3 downto 0);
-		dk22 <= dk22_t(3 downto 0);
-		dk23 <= dk23_t(3 downto 0);
-		
-		dk31 <= dk31_t(3 downto 0);
-		dk32 <= dk32_t(3 downto 0);
-		dk33 <= dk33_t(3 downto 0);
 	
 	pipeline : process(clk)
 		begin
@@ -119,23 +104,25 @@ begin
 				pipe17 <= ek11*ek22;
 				pipe18 <= ek12*ek21;
 				
-				cof11 <= pipe1(3 downto 0) + pipe2(3 downto 0);
-				cof12 <= pipe3(3 downto 0) + pipe4(3 downto 0);
-				cof13 <= pipe5(3 downto 0) + pipe6(3 downto 0);
-				cof21 <= pipe7(3 downto 0) + pipe8(3 downto 0);
-				cof22 <= pipe9(3 downto 0) + pipe10(3 downto 0);
-				cof23 <= pipe11(3 downto 0) + pipe12(3 downto 0);
-				cof31 <= pipe13(3 downto 0) + pipe14(3 downto 0);
-				cof32 <= pipe15(3 downto 0) + pipe16(3 downto 0);
-				cof33 <= pipe17(3 downto 0) + pipe18(3 downto 0);
+				cof11 <= pipe1(3 downto 0) - pipe2(3 downto 0);
+				cof12 <= pipe3(3 downto 0) - pipe4(3 downto 0);
+				cof13 <= pipe5(3 downto 0) - pipe6(3 downto 0);
+				cof21 <= pipe7(3 downto 0) - pipe8(3 downto 0);
+				cof22 <= pipe9(3 downto 0) - pipe10(3 downto 0);
+				cof23 <= pipe11(3 downto 0) - pipe12(3 downto 0);
+				cof31 <= pipe13(3 downto 0) - pipe14(3 downto 0);
+				cof32 <= pipe15(3 downto 0) - pipe16(3 downto 0);
+				cof33 <= pipe17(3 downto 0) - pipe18(3 downto 0);
 				
 				pipe19 <= ek11*cof11;
 				pipe20 <= ek12*cof12;
 				pipe21 <= ek13*cof13;
 				
-				pipe22 <= pipe19 + pipe20;
+				--pipe22 <= pipe19 + pipe20;
 				
-				det_temp <= pipe22 + pipe21;
+				det <= pipe19(3 downto 0) + pipe20(3 downto 0)+ pipe21(3 downto 0);
+				
+				--det <= det_temp(3 downto 0);
 				
 				--adj11 <= cof11;
 				--adj22 <= cof22;
@@ -162,6 +149,17 @@ begin
 				dk32_t <=det_minv*cof23;
 				dk33_t <=det_minv*cof33;
 				
+				dk11 <= dk11_t(3 downto 0);
+				dk12 <= dk12_t(3 downto 0);
+				dk13 <= dk13_t(3 downto 0);
+				
+				dk21 <= dk21_t(3 downto 0);
+				dk22 <= dk22_t(3 downto 0);
+				dk23 <= dk23_t(3 downto 0);
+				
+				dk31 <= dk31_t(3 downto 0);
+				dk32 <= dk32_t(3 downto 0);
+				dk33 <= dk33_t(3 downto 0);	
 			end if;
 	end process;
 end implementation;

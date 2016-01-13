@@ -68,12 +68,12 @@ GND                          : A1        : gnd    :                   :         
 VCCIO2                       : A2        : power  :                   : 3.3V    : 2         :                
 GND*                         : A3        :        :                   :         : 2         :                
 GND*                         : A4        :        :                   :         : 2         :                
-GND*                         : A5        :        :                   :         : 2         :                
-GND*                         : A6        :        :                   :         : 2         :                
-dk21[0]                      : A7        : output : 3.3-V LVTTL       :         : 2         : N              
-dk22[1]                      : A8        : output : 3.3-V LVTTL       :         : 2         : N              
-dk32[1]                      : A9        : output : 3.3-V LVTTL       :         : 2         : N              
-ek22[0]                      : A10       : input  : 3.3-V LVTTL       :         : 2         : N              
+dk22[0]                      : A5        : output : 3.3-V LVTTL       :         : 2         : N              
+dk33[3]                      : A6        : output : 3.3-V LVTTL       :         : 2         : N              
+ek32[0]                      : A7        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek11[2]                      : A8        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek11[3]                      : A9        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek11[0]                      : A10       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : A11       :        :                   :         : 2         :                
 GND*                         : A12       :        :                   :         : 2         :                
 GND*                         : A13       :        :                   :         : 2         :                
@@ -85,10 +85,10 @@ GND                          : B2        : gnd    :                   :         
 GND*                         : B3        :        :                   :         : 2         :                
 GND*                         : B4        :        :                   :         : 2         :                
 GND*                         : B5        :        :                   :         : 2         :                
-GND*                         : B6        :        :                   :         : 2         :                
-dk21[2]                      : B7        : output : 3.3-V LVTTL       :         : 2         : N              
+dk33[1]                      : B6        : output : 3.3-V LVTTL       :         : 2         : N              
+ek33[1]                      : B7        : input  : 3.3-V LVTTL       :         : 2         : N              
 NC                           : B8        :        :                   :         :           :                
-dk22[3]                      : B9        : output : 3.3-V LVTTL       :         : 2         : N              
+ek32[2]                      : B9        : input  : 3.3-V LVTTL       :         : 2         : N              
 ek12[3]                      : B10       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : B11       :        :                   :         : 2         :                
 GND*                         : B12       :        :                   :         : 2         :                
@@ -99,14 +99,14 @@ VCCIO3                       : B16       : power  :                   : 3.3V    
 GND*                         : C1        :        :                   :         : 1         :                
 GND*                         : C2        :        :                   :         : 1         :                
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C3        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : C4        :        :                   :         : 2         :                
-GND*                         : C5        :        :                   :         : 2         :                
-GND*                         : C6        :        :                   :         : 2         :                
+ek13[3]                      : C4        : input  : 3.3-V LVTTL       :         : 2         : N              
+dk33[0]                      : C5        : output : 3.3-V LVTTL       :         : 2         : N              
+dk33[2]                      : C6        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : C7        : power  :                   : 3.3V    : 2         :                
 GND                          : C8        : gnd    :                   :         :           :                
 GND                          : C9        : gnd    :                   :         :           :                
 VCCIO2                       : C10       : power  :                   : 3.3V    : 2         :                
-ek31[2]                      : C11       : input  : 3.3-V LVTTL       :         : 2         : N              
+dk22[3]                      : C11       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : C12       :        :                   :         : 2         :                
 GND*                         : C13       :        :                   :         : 2         :                
 GND*                         : C14       :        :                   :         : 3         :                
@@ -117,19 +117,19 @@ NC                           : D2        :        :                   :         
 GND*                         : D3        :        :                   :         : 1         :                
 GND*                         : D4        :        :                   :         : 1         :                
 GND*                         : D5        :        :                   :         : 1         :                
-GND*                         : D6        :        :                   :         : 2         :                
+dk13[2]                      : D6        : output : 3.3-V LVTTL       :         : 2         : N              
 NC                           : D7        :        :                   :         :           :                
-dk23[1]                      : D8        : output : 3.3-V LVTTL       :         : 2         : N              
+ek21[0]                      : D8        : input  : 3.3-V LVTTL       :         : 2         : N              
 NC                           : D9        :        :                   :         :           :                
-dk32[0]                      : D10       : output : 3.3-V LVTTL       :         : 2         : N              
-dk32[3]                      : D11       : output : 3.3-V LVTTL       :         : 2         : N              
+ek32[3]                      : D10       : input  : 3.3-V LVTTL       :         : 2         : N              
+ek32[1]                      : D11       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND_PLL2                     : D12       : gnd    :                   :         :           :                
 GND*                         : D13       :        :                   :         : 3         :                
 GND*                         : D14       :        :                   :         : 3         :                
 GND*                         : D15       :        :                   :         : 3         :                
 GND*                         : D16       :        :                   :         : 3         :                
-GND*                         : E1        :        :                   :         : 1         :                
-GND*                         : E2        :        :                   :         : 1         :                
+dk12[1]                      : E1        : output : 3.3-V LVTTL       :         : 1         : N              
+dk12[0]                      : E2        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : E3        :        :                   :         : 1         :                
 GND*                         : E4        :        :                   :         : 1         :                
 GND*                         : E5        :        :                   :         : 1         :                
@@ -146,14 +146,14 @@ NC                           : E15       :        :                   :         
 GND*                         : E16       :        :                   :         : 3         :                
 DATA0                        : F1        : input  :                   :         : 1         :                
 TCK                          : F2        : input  :                   :         : 1         :                
-GND*                         : F3        :        :                   :         : 1         :                
+dk23[0]                      : F3        : output : 3.3-V LVTTL       :         : 1         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F4        : input  : 3.3-V LVTTL       :         : 1         : N              
 NC                           : F5        :        :                   :         :           :                
 GND*                         : F6        :        :                   :         : 2         :                
-dk21[3]                      : F7        : output : 3.3-V LVTTL       :         : 2         : N              
-dk21[1]                      : F8        : output : 3.3-V LVTTL       :         : 2         : N              
-ek31[3]                      : F9        : input  : 3.3-V LVTTL       :         : 2         : N              
-ek12[2]                      : F10       : input  : 3.3-V LVTTL       :         : 2         : N              
+ek12[1]                      : F7        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek23[0]                      : F8        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek11[1]                      : F9        : input  : 3.3-V LVTTL       :         : 2         : N              
+ek33[0]                      : F10       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCD_PLL2                    : F11       : power  :                   : 1.2V    :           :                
 GND_PLL2                     : F12       : gnd    :                   :         :           :                
 NC                           : F13       :        :                   :         :           :                
@@ -165,12 +165,12 @@ TDO                          : G2        : output :                   :         
 VCCIO1                       : G3        : power  :                   : 3.3V    : 1         :                
 NC                           : G4        :        :                   :         :           :                
 nCE                          : G5        :        :                   :         : 1         :                
-GND*                         : G6        :        :                   :         : 2         :                
-GND*                         : G7        :        :                   :         : 2         :                
+ek23[1]                      : G6        : input  : 3.3-V LVTTL       :         : 2         : N              
+dk31[0]                      : G7        : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : G8        : gnd    :                   :         :           :                
 VCCINT                       : G9        : power  :                   : 1.2V    :           :                
-GND*                         : G10       :        :                   :         : 2         :                
-GND*                         : G11       :        :                   :         : 2         :                
+ek33[3]                      : G10       : input  : 3.3-V LVTTL       :         : 2         : N              
+ek33[2]                      : G11       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : G12       :        :                   :         : 3         :                
 GND*                         : G13       :        :                   :         : 3         :                
 VCCIO3                       : G14       : power  :                   : 3.3V    : 3         :                
@@ -195,7 +195,7 @@ ek22[1]                      : H16       : input  : 3.3-V LVTTL       :         
 GND+                         : J1        :        :                   :         : 1         :                
 GND+                         : J2        :        :                   :         : 1         :                
 GND                          : J3        : gnd    :                   :         :           :                
-dk12[0]                      : J4        : output : 3.3-V LVTTL       :         : 1         : N              
+dk32[2]                      : J4        : output : 3.3-V LVTTL       :         : 1         : N              
 nCONFIG                      : J5        :        :                   :         : 1         :                
 NC                           : J6        :        :                   :         :           :                
 VCCINT                       : J7        : power  :                   : 1.2V    :           :                
@@ -208,42 +208,42 @@ MSEL0                        : J13       :        :                   :         
 GND                          : J14       : gnd    :                   :         :           :                
 ek21[3]                      : J15       : input  : 3.3-V LVTTL       :         : 3         : N              
 ek21[1]                      : J16       : input  : 3.3-V LVTTL       :         : 3         : N              
-dk33[3]                      : K1        : output : 3.3-V LVTTL       :         : 1         : N              
-dk33[0]                      : K2        : output : 3.3-V LVTTL       :         : 1         : N              
+dk12[3]                      : K1        : output : 3.3-V LVTTL       :         : 1         : N              
+dk12[2]                      : K2        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : K3        : power  :                   : 3.3V    : 1         :                
-dk13[2]                      : K4        : output : 3.3-V LVTTL       :         : 1         : N              
-dk33[1]                      : K5        : output : 3.3-V LVTTL       :         : 1         : N              
+dk21[1]                      : K4        : output : 3.3-V LVTTL       :         : 1         : N              
+dk13[0]                      : K5        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : K6        :        :                   :         :           :                
 NC                           : K7        :        :                   :         :           :                
 NC                           : K8        :        :                   :         :           :                
 GND                          : K9        : gnd    :                   :         :           :                
-ek11[0]                      : K10       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek11[1]                      : K11       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek22[2]                      : K10       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : K11       :        :                   :         : 4         :                
 MSEL1                        : K12       :        :                   :         : 3         :                
 NC                           : K13       :        :                   :         :           :                
 VCCIO3                       : K14       : power  :                   : 3.3V    : 3         :                
-ek33[1]                      : K15       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek33[0]                      : K16       : input  : 3.3-V LVTTL       :         : 3         : N              
-dk12[2]                      : L1        : output : 3.3-V LVTTL       :         : 1         : N              
-dk12[1]                      : L2        : output : 3.3-V LVTTL       :         : 1         : N              
-dk13[3]                      : L3        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : K15       :        :                   :         : 3         :                
+GND*                         : K16       :        :                   :         : 3         :                
+dk13[1]                      : L1        : output : 3.3-V LVTTL       :         : 1         : N              
+dk32[1]                      : L2        : output : 3.3-V LVTTL       :         : 1         : N              
+dk11[1]                      : L3        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : L4        :        :                   :         : 1         :                
 GND_PLL1                     : L5        : gnd    :                   :         :           :                
 VCCD_PLL1                    : L6        : power  :                   : 1.2V    :           :                
-dk31[3]                      : L7        : output : 3.3-V LVTTL       :         : 4         : N              
-dk23[3]                      : L8        : output : 3.3-V LVTTL       :         : 4         : N              
-ek13[0]                      : L9        : input  : 3.3-V LVTTL       :         : 4         : N              
-ek13[1]                      : L10       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek13[1]                      : L7        : input  : 3.3-V LVTTL       :         : 4         : N              
+ek12[0]                      : L8        : input  : 3.3-V LVTTL       :         : 4         : N              
+ek22[3]                      : L9        : input  : 3.3-V LVTTL       :         : 4         : N              
+ek22[0]                      : L10       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : L11       :        :                   :         : 4         :                
 GND*                         : L12       :        :                   :         : 4         :                
 CONF_DONE                    : L13       :        :                   :         : 3         :                
-ek33[3]                      : L14       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek33[2]                      : L15       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek23[3]                      : L16       : input  : 3.3-V LVTTL       :         : 3         : N              
-dk12[3]                      : M1        : output : 3.3-V LVTTL       :         : 1         : N              
-dk13[1]                      : M2        : output : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : M3        :        :                   :         : 1         :                
-GND*                         : M4        :        :                   :         : 1         :                
+GND*                         : L14       :        :                   :         : 3         :                
+GND*                         : L15       :        :                   :         : 3         :                
+GND*                         : L16       :        :                   :         : 3         :                
+dk21[2]                      : M1        : output : 3.3-V LVTTL       :         : 1         : N              
+dk22[2]                      : M2        : output : 3.3-V LVTTL       :         : 1         : N              
+dk32[3]                      : M3        : output : 3.3-V LVTTL       :         : 1         : N              
+dk31[1]                      : M4        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCA_PLL1                    : M5        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : M6        : gnd    :                   :         :           :                
 VCCIO4                       : M7        : power  :                   : 3.3V    : 4         :                
@@ -253,25 +253,25 @@ VCCIO4                       : M10       : power  :                   : 3.3V    
 GND*                         : M11       :        :                   :         : 4         :                
 GND*                         : M12       :        :                   :         : 3         :                
 nSTATUS                      : M13       :        :                   :         : 3         :                
-ek23[2]                      : M14       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek11[3]                      : M15       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek23[1]                      : M16       : input  : 3.3-V LVTTL       :         : 3         : N              
-dk13[0]                      : N1        : output : 3.3-V LVTTL       :         : 1         : N              
-dk23[0]                      : N2        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : M14       :        :                   :         : 3         :                
+GND*                         : M15       :        :                   :         : 3         :                
+GND*                         : M16       :        :                   :         : 3         :                
+dk32[0]                      : N1        : output : 3.3-V LVTTL       :         : 1         : N              
+dk31[2]                      : N2        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : N3        :        :                   :         :           :                
 NC                           : N4        :        :                   :         :           :                
 GND_PLL1                     : N5        : gnd    :                   :         :           :                
 NC                           : N6        :        :                   :         :           :                
 NC                           : N7        :        :                   :         :           :                
-dk11[2]                      : N8        : output : 3.3-V LVTTL       :         : 4         : N              
-ek11[2]                      : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
-ek22[3]                      : N10       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek31[0]                      : N11       : input  : 3.3-V LVTTL       :         : 4         : N              
+dk23[3]                      : N8        : output : 3.3-V LVTTL       :         : 4         : N              
+ek12[2]                      : N9        : input  : 3.3-V LVTTL       :         : 4         : N              
+ek31[0]                      : N10       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek23[2]                      : N11       : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : N12       :        :                   :         : 3         :                
 GND*                         : N13       :        :                   :         : 3         :                
 ~LVDS41p/nCEO~               : N14       : output : 3.3-V LVTTL       :         : 3         : N              
-ek32[0]                      : N15       : input  : 3.3-V LVTTL       :         : 3         : N              
-ek22[2]                      : N16       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : N15       :        :                   :         : 3         :                
+GND*                         : N16       :        :                   :         : 3         :                
 GND*                         : P1        :        :                   :         : 1         :                
 GND*                         : P2        :        :                   :         : 1         :                
 GND*                         : P3        :        :                   :         : 1         :                
@@ -282,24 +282,24 @@ VCCIO4                       : P7        : power  :                   : 3.3V    
 GND                          : P8        : gnd    :                   :         :           :                
 GND                          : P9        : gnd    :                   :         :           :                
 VCCIO4                       : P10       : power  :                   : 3.3V    : 4         :                
-ek21[0]                      : P11       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek12[0]                      : P12       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek32[1]                      : P13       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek31[2]                      : P11       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : P12       :        :                   :         : 4         :                
+GND*                         : P13       :        :                   :         : 4         :                
 GND*                         : P14       :        :                   :         : 3         :                
-ek32[3]                      : P15       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : P15       :        :                   :         : 3         :                
 GND*                         : P16       :        :                   :         : 3         :                
 VCCIO1                       : R1        : power  :                   : 3.3V    : 1         :                
 GND                          : R2        : gnd    :                   :         :           :                
 GND*                         : R3        :        :                   :         : 4         :                
-dk11[3]                      : R4        : output : 3.3-V LVTTL       :         : 4         : N              
-dk31[0]                      : R5        : output : 3.3-V LVTTL       :         : 4         : N              
+dk11[0]                      : R4        : output : 3.3-V LVTTL       :         : 4         : N              
+dk21[0]                      : R5        : output : 3.3-V LVTTL       :         : 4         : N              
 NC                           : R6        :        :                   :         :           :                
-dk11[1]                      : R7        : output : 3.3-V LVTTL       :         : 4         : N              
-dk31[1]                      : R8        : output : 3.3-V LVTTL       :         : 4         : N              
-dk22[0]                      : R9        : output : 3.3-V LVTTL       :         : 4         : N              
-ek13[2]                      : R10       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek13[3]                      : R11       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek12[1]                      : R12       : input  : 3.3-V LVTTL       :         : 4         : N              
+dk13[3]                      : R7        : output : 3.3-V LVTTL       :         : 4         : N              
+dk23[1]                      : R8        : output : 3.3-V LVTTL       :         : 4         : N              
+dk11[3]                      : R9        : output : 3.3-V LVTTL       :         : 4         : N              
+ek23[3]                      : R10       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek31[3]                      : R11       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : R12       :        :                   :         : 4         :                
 GND*                         : R13       :        :                   :         : 4         :                
 GND*                         : R14       :        :                   :         : 4         :                
 GND                          : R15       : gnd    :                   :         :           :                
@@ -307,16 +307,16 @@ VCCIO3                       : R16       : power  :                   : 3.3V    
 GND                          : T1        : gnd    :                   :         :           :                
 VCCIO4                       : T2        : power  :                   : 3.3V    : 4         :                
 GND*                         : T3        :        :                   :         : 4         :                
-GND*                         : T4        :        :                   :         : 4         :                
+dk31[3]                      : T4        : output : 3.3-V LVTTL       :         : 4         : N              
 dk23[2]                      : T5        : output : 3.3-V LVTTL       :         : 4         : N              
-dk11[0]                      : T6        : output : 3.3-V LVTTL       :         : 4         : N              
-dk33[2]                      : T7        : output : 3.3-V LVTTL       :         : 4         : N              
-dk31[2]                      : T8        : output : 3.3-V LVTTL       :         : 4         : N              
-dk22[2]                      : T9        : output : 3.3-V LVTTL       :         : 4         : N              
-ek31[1]                      : T10       : input  : 3.3-V LVTTL       :         : 4         : N              
-dk32[2]                      : T11       : output : 3.3-V LVTTL       :         : 4         : N              
-ek23[0]                      : T12       : input  : 3.3-V LVTTL       :         : 4         : N              
-ek32[2]                      : T13       : input  : 3.3-V LVTTL       :         : 4         : N              
+ek13[2]                      : T6        : input  : 3.3-V LVTTL       :         : 4         : N              
+dk11[2]                      : T7        : output : 3.3-V LVTTL       :         : 4         : N              
+dk21[3]                      : T8        : output : 3.3-V LVTTL       :         : 4         : N              
+ek31[1]                      : T9        : input  : 3.3-V LVTTL       :         : 4         : N              
+dk22[1]                      : T10       : output : 3.3-V LVTTL       :         : 4         : N              
+ek13[0]                      : T11       : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : T12       :        :                   :         : 4         :                
+GND*                         : T13       :        :                   :         : 4         :                
 GND*                         : T14       :        :                   :         : 4         :                
 VCCIO4                       : T15       : power  :                   : 3.3V    : 4         :                
 GND                          : T16       : gnd    :                   :         :           :                
