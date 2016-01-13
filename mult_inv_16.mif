@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: 		Vincent Levesque 								   %
+% Date: 		September 3, 2001 								   %
+% Description: 	Lookup table for multiplicative inverses modulo 16 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+DEPTH = 16;	% number of entries (4-bit => 16 possible inputs) %
+WIDTH = 4;	% width of output %
+
+ADDRESS_RADIX = DEC; 	% type in which address (input) will be specified %
+DATA_RADIX = DEC; 		% type in which result (output) will be specified %
+
+% lookup table %
+% left: input value %
+% right: multiplicative inverse of input value or 0 if there is no inverse %
+CONTENT
+	BEGIN
+	0  : 0;
+	1  : 1;
+	2  : 0;
+	3  : 11;
+	5  : 13;
+	7  : 7;
+	9  : 9;
+	11 : 3;
+	13 : 5;
+	15 : 15;
+	END ;	
