@@ -42,9 +42,17 @@ end key_inverter;
 
 architecture implementation of key_inverter is
 
+--Signal 	ek11_temp,ek12_temp,ek13_temp		:	std_logic_vector(3 downto 0);
+--Signal 	ek21_temp,ek22_temp,ek23_temp		:	std_logic_vector(3 downto 0);
+--Signal 	ek31_temp,ek32_temp,ek33_temp		:	std_logic_vector(3 downto 0);
+
 Signal 	cof11,cof12,cof13		:	std_logic_vector(3 downto 0);
 Signal	cof21,cof22,cof23		:	std_logic_vector(3 downto 0);
 Signal	cof31,cof32,cof33		:	std_logic_vector(3 downto 0);
+
+--Signal adj11,adj12,adj13		:	std_logic_vector(3 downto 0);
+--Signal	adj21,adj22,adj23		:	std_logic_vector(3 downto 0);
+--Signal	adj31,adj32,adj33		:	std_logic_vector(3 downto 0);
 
 Signal 	pipe1,pipe2,pipe3		:	std_logic_vector(7 downto 0);
 Signal	pipe4,pipe5,pipe6		:	std_logic_vector(7 downto 0);
@@ -59,8 +67,8 @@ Signal 	dk11_t,dk12_t,dk13_t	:	std_logic_vector(7 downto 0);
 Signal	dk21_t,dk22_t,dk23_t	:	std_logic_vector(7 downto 0);
 Signal	dk31_t,dk32_t,dk33_t	:	std_logic_vector(7 downto 0);
 
-Signal	det,det_minv			:	std_logic_vector(3 downto 0);
-Signal	det_temp					:	std_logic_vector(7 downto 0);
+Signal	det_minv			:	std_logic_vector(3 downto 0);
+Signal	det,det_temp					:	std_logic_vector(7 downto 0);
 
 
 begin
@@ -75,7 +83,7 @@ begin
 			lpm_outdata => "UNREGISTERED"
 		)
 		PORT MAP (
-			address => det,
+			address => det(3 downto 0),
 			inclock => clk,
 			q => det_minv
 		);
@@ -83,8 +91,8 @@ begin
 	pipeline : process(clk)
 		begin
 		
-			if rising_edge(clk) then
-				
+			if rising_edge(clk) then			
+			
 				pipe1 <= ek22*ek33;
 				pipe2 <= ek23*ek32;
 				pipe3 <= ek23*ek31;
@@ -114,28 +122,7 @@ begin
 				cof32 <= pipe15(3 downto 0) - pipe16(3 downto 0);
 				cof33 <= pipe17(3 downto 0) - pipe18(3 downto 0);
 				
-				pipe19 <= ek11*cof11;
-				pipe20 <= ek12*cof12;
-				pipe21 <= ek13*cof13;
-				
-				--pipe22 <= pipe19 + pipe20;
-				
-				det <= pipe19(3 downto 0) + pipe20(3 downto 0)+ pipe21(3 downto 0);
-				
-				--det <= det_temp(3 downto 0);
-				
-				--adj11 <= cof11;
-				--adj22 <= cof22;
-				--adj33 <= cof33;
-				
-				--adj12 <= cof21;
-				--adj13 <= cof31;
-				
-				--adj21 <= cof12;
-				--adj23 <= cof32;
-				
-				--adj31 <= cof13;
-				--adj32 <= cof23;
+				det <= ek11*cof11 + ek12*cof12 + ek13*cof13;
 				
 				dk11_t <=det_minv*cof11;
 				dk12_t <=det_minv*cof21;

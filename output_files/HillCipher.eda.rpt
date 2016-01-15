@@ -1,5 +1,5 @@
 EDA Netlist Writer report for HillCipher
-Wed Jan 13 14:26:44 2016
+Fri Jan 15 14:22:12 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jan 13 14:26:44 2016 ;
+; EDA Netlist Writer Status ; Successful - Fri Jan 15 14:22:12 2016 ;
 ; Revision Name             ; HillCipher                            ;
 ; Top-level Entity Name     ; key_inverter                          ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Jan 13 14:26:42 2016
+    Info: Processing started: Fri Jan 15 14:22:09 2016
 Info: Command: quartus_eda --functional=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog HillCipher -c HillCipher
 Info (204026): Generated files "HillCipher.vo", "HillCipher_fast.vo", "HillCipher_v.sdo" and "HillCipher_v_fast.sdo" in directory "C:/Users/scarte9/ECSE487-Ass/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 403 megabytes
-    Info: Processing ended: Wed Jan 13 14:26:44 2016
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 397 megabytes
+    Info: Processing ended: Fri Jan 15 14:22:12 2016
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

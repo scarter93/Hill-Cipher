@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Wed Jan 13 14:26:15 2016
+Analysis & Synthesis Status : Successful - Fri Jan 15 14:21:39 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : HillCipher
 Top-level Entity Name : key_inverter
 Family : Cyclone II
 Total logic elements : 472
     Total combinational functions : 436
-    Dedicated logic registers : 196
-Total registers : 196
+    Dedicated logic registers : 184
+Total registers : 184
 Total pins : 73
 Total virtual pins : 0
 Total memory bits : 64

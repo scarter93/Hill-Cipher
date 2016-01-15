@@ -1,5 +1,5 @@
 Flow report for HillCipher
-Wed Jan 13 14:26:44 2016
+Fri Jan 15 14:22:12 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jan 13 14:26:44 2016            ;
+; Flow Status                        ; Successful - Fri Jan 15 14:22:12 2016            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; HillCipher                                       ;
 ; Top-level Entity Name              ; key_inverter                                     ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 464 / 4,608 ( 10 % )                             ;
+; Total logic elements               ; 457 / 4,608 ( 10 % )                             ;
 ;     Total combinational functions  ; 436 / 4,608 ( 9 % )                              ;
-;     Dedicated logic registers      ; 196 / 4,608 ( 4 % )                              ;
-; Total registers                    ; 196                                              ;
+;     Dedicated logic registers      ; 184 / 4,608 ( 4 % )                              ;
+; Total registers                    ; 184                                              ;
 ; Total pins                         ; 73 / 158 ( 46 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 64 / 119,808 ( < 1 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/13/2016 14:26:13 ;
+; Start date & time ; 01/15/2016 14:21:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HillCipher          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+--------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name  ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 203178703647748.145271317309260 ; --            ; --           ; --             ;
+; COMPILER_SIGNATURE_ID               ; 203178703647748.145288569706764 ; --            ; --           ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --           ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --           ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --           ; --             ;
@@ -93,14 +93,14 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 518 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:05     ; 2.0                     ; 1031 MB             ; 00:00:04                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 426 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 437 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 385 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 387 MB              ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 403 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 517 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 1026 MB             ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 421 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 431 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 385 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 397 MB              ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 397 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:10                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
