@@ -2,22 +2,22 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_inverter
+# -- Compiling module hill_cipher
 # 
 # Top level modules:
-# 	key_inverter
+# 	hill_cipher
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module key_inverter_vlg_sample_tst
-# -- Compiling module key_inverter_vlg_check_tst
-# -- Compiling module key_inverter_vlg_vec_tst
+# -- Compiling module hill_cipher_vlg_sample_tst
+# -- Compiling module hill_cipher_vlg_check_tst
+# -- Compiling module hill_cipher_vlg_vec_tst
 # 
 # Top level modules:
-# 	key_inverter_vlg_vec_tst
-# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.key_inverter_vlg_vec_tst 
-# Loading work.key_inverter_vlg_vec_tst
-# Loading work.key_inverter
-# Loading cycloneii_ver.cycloneii_lcell_ff
+# 	hill_cipher_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.hill_cipher_vlg_vec_tst 
+# Loading work.hill_cipher_vlg_vec_tst
+# Loading work.hill_cipher
 # Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -28,123 +28,51 @@
 # Loading cycloneii_ver.cycloneii_ram_block
 # Loading cycloneii_ver.cycloneii_ram_register
 # Loading cycloneii_ver.cycloneii_ram_pulse_generator
-# Loading work.key_inverter_vlg_sample_tst
-# Loading work.key_inverter_vlg_check_tst
+# Loading work.hill_cipher_vlg_sample_tst
+# Loading work.hill_cipher_vlg_check_tst
 # SDF 10.1d Compiler 2012.11 Nov  2 2012
 # 
 # Loading instances from HillCipher_v.sdo
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Loading timing data from HillCipher_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /key_inverter_vlg_vec_tst File: HillCipher.vt
-# ERROR! Vector Mismatch for output port dk11[1] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk11[3] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk12[2] :: @time = 1000000.000 ps
+#    Time: 0 ps  Iteration: 0  Instance: /hill_cipher_vlg_vec_tst File: HillCipher.vt
+# ERROR! Vector Mismatch for output port c1[2] :: @time = 2000000.000 ps
 #      Expected value = 0000
 #      Real value = 0100
-# ERROR! Vector Mismatch for output port dk13[0] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 0001
-# ERROR! Vector Mismatch for output port dk21[1] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk21[3] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk22[0] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1001
-# ERROR! Vector Mismatch for output port dk22[3] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1001
-# ERROR! Vector Mismatch for output port dk23[1] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk23[2] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk23[3] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk31[0] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 0001
-# ERROR! Vector Mismatch for output port dk32[1] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk32[2] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk32[3] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port dk33[0] :: @time = 1000000.000 ps
-#      Expected value = 0000
-#      Real value = 0001
-# ERROR! Vector Mismatch for output port dk11[0] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1101
-# ERROR! Vector Mismatch for output port dk11[2] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1101
-# ERROR! Vector Mismatch for output port dk12[1] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk12[3] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk13[1] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 0111
-# ERROR! Vector Mismatch for output port dk13[2] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 0111
-# ERROR! Vector Mismatch for output port dk21[2] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 0100
-# ERROR! Vector Mismatch for output port dk31[1] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1011
-# ERROR! Vector Mismatch for output port dk31[3] :: @time = 1400000.000 ps
-#      Expected value = 0000
-#      Real value = 1011
-# ERROR! Vector Mismatch for output port dk33[1] :: @time = 1400000.000 ps
+# ERROR! Vector Mismatch for output port c2[1] :: @time = 2000000.000 ps
 #      Expected value = 0000
 #      Real value = 0010
-# ERROR! Vector Mismatch for output port dk22[2] :: @time = 1600000.000 ps
+# ERROR! Vector Mismatch for output port c3[1] :: @time = 2000000.000 ps
 #      Expected value = 0000
-#      Real value = 0101
-# ERROR! Vector Mismatch for output port dk31[2] :: @time = 1600000.000 ps
+#      Real value = 1110
+# ERROR! Vector Mismatch for output port c3[2] :: @time = 2000000.000 ps
 #      Expected value = 0000
-#      Real value = 0111
-# ERROR! Vector Mismatch for output port dk33[3] :: @time = 1600000.000 ps
+#      Real value = 1110
+# ERROR! Vector Mismatch for output port c3[3] :: @time = 2000000.000 ps
 #      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk12[0] :: @time = 2600000.000 ps
+#      Real value = 1110
+# ERROR! Vector Mismatch for output port c1[0] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 0111
-# ERROR! Vector Mismatch for output port dk13[3] :: @time = 2600000.000 ps
+#      Real value = 1011
+# ERROR! Vector Mismatch for output port c1[1] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 1001
-# ERROR! Vector Mismatch for output port dk21[0] :: @time = 2600000.000 ps
+#      Real value = 1011
+# ERROR! Vector Mismatch for output port c1[3] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 0101
-# ERROR! Vector Mismatch for output port dk22[1] :: @time = 2600000.000 ps
+#      Real value = 1011
+# ERROR! Vector Mismatch for output port c2[0] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 1010
-# ERROR! Vector Mismatch for output port dk32[0] :: @time = 2600000.000 ps
+#      Real value = 1101
+# ERROR! Vector Mismatch for output port c2[2] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 1111
-# ERROR! Vector Mismatch for output port dk33[2] :: @time = 2600000.000 ps
+#      Real value = 1101
+# ERROR! Vector Mismatch for output port c2[3] :: @time = 2100000.000 ps
 #      Expected value = 0000
-#      Real value = 1100
-# ERROR! Vector Mismatch for output port dk23[0] :: @time = 3600000.000 ps
+#      Real value = 1101
+# ERROR! Vector Mismatch for output port c3[0] :: @time = 2400000.000 ps
 #      Expected value = 0000
-#      Real value = 1111
-#          36 mismatched vectors : Simulation failed !
-# ** Note: $finish    : HillCipher.vt(895)
-#    Time: 8 us  Iteration: 0  Instance: /key_inverter_vlg_vec_tst/tb_out
+#      Real value = 0001
+#          12 mismatched vectors : Simulation failed !
+# ** Note: $finish    : HillCipher.vt(383)
+#    Time: 5 us  Iteration: 0  Instance: /hill_cipher_vlg_vec_tst/tb_out

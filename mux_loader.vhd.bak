@@ -1,0 +1,77 @@
+--entity name: mux_loader
+-- Stephen Carter
+
+
+entity mux_loader is
+	port(	encrypt	:	in std_logic;
+	
+			k11		:	in std_logic_vector(3 downto 0);
+			k12		:	in std_logic_vector(3 downto 0);
+			k13		:	in std_logic_vector(3 downto 0);
+			
+			k21		:	in std_logic_vector(3 downto 0);
+			k22		:	in std_logic_vector(3 downto 0);
+			k23		:	in std_logic_vector(3 downto 0);
+			
+			k31		:	in std_logic_vector(3 downto 0);
+			k32		:	in std_logic_vector(3 downto 0);
+			k33		:	in std_logic_vector(3 downto 0);
+			
+			ek11		:	in std_logic_vector(3 downto 0);
+			ek12		:	in std_logic_vector(3 downto 0);
+			ek13		:	in std_logic_vector(3 downto 0);
+			
+			ek21		:	in std_logic_vector(3 downto 0);
+			ek22		:	in std_logic_vector(3 downto 0);
+			ek23		:	in std_logic_vector(3 downto 0);
+			
+			ek31		:	in std_logic_vector(3 downto 0);
+			ek32		:	in std_logic_vector(3 downto 0);
+			ek33		:	in std_logic_vector(3 downto 0);
+			
+			s11		:	out std_logic_vector(3 downto 0);
+			s12		:	out std_logic_vector(3 downto 0);
+			s13		:	out std_logic_vector(3 downto 0);
+			
+			s21		:	out std_logic_vector(3 downto 0);
+			s22		:	out std_logic_vector(3 downto 0);
+			s23		:	out std_logic_vector(3 downto 0);
+			
+			s31		:	out std_logic_vector(3 downto 0);
+			s32		:	out std_logic_vector(3 downto 0);
+			s33		:	out std_logic_vector(3 downto 0)
+			
+		);
+end mux_loader;
+		
+architecture implementation of mux_loader is
+
+begin
+
+	case encrypt is
+		when '1' =>
+			s11 <= k11;
+			s12 <= k12;
+			s13 <= k13;
+			
+			s21 <= k21;
+			s22 <= k22;
+			s23 <= k23;
+			
+			s31 <= k31;
+			s32 <= k32;
+			s33 <= k33;
+		when '0' =>
+			s11 <= ek11;
+			s12 <= ek12;
+			s13 <= ek13;
+			
+			s21 <= ek21;
+			s22 <= ek22;
+			s23 <= ek23;
+			
+			s31 <= ek31;
+			s32 <= ek32;
+			s33 <= ek33;
+
+end implementation;

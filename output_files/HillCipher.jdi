@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="545e9b78476785f3c069"/>
+    <hash md5_digest_80b="1dd207bd2704c6bcaf28"/>
   </project>
   <file_info>
-    <file device="EP2C5F256C6" path="HillCipher.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP2C5T144C6" path="HillCipher.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>
