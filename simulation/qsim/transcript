@@ -2,22 +2,20 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module hill_cipher
+# -- Compiling module key_loader
 # 
 # Top level modules:
-# 	hill_cipher
+# 	key_loader
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module hill_cipher_vlg_sample_tst
-# -- Compiling module hill_cipher_vlg_check_tst
-# -- Compiling module hill_cipher_vlg_vec_tst
+# -- Compiling module key_loader_vlg_sample_tst
+# -- Compiling module key_loader_vlg_check_tst
+# -- Compiling module key_loader_vlg_vec_tst
 # 
 # Top level modules:
-# 	hill_cipher_vlg_vec_tst
-# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.hill_cipher_vlg_vec_tst 
-# Loading work.hill_cipher_vlg_vec_tst
-# Loading work.hill_cipher
-# Loading cycloneii_ver.cycloneii_lcell_comb
-# Loading cycloneii_ver.cycloneii_lcell_ff
+# 	key_loader_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.key_loader_vlg_vec_tst 
+# Loading work.key_loader_vlg_vec_tst
+# Loading work.key_loader
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -25,54 +23,17 @@
 # Loading cycloneii_ver.cycloneii_clkctrl
 # Loading cycloneii_ver.cycloneii_mux41
 # Loading cycloneii_ver.cycloneii_ena_reg
-# Loading cycloneii_ver.cycloneii_ram_block
-# Loading cycloneii_ver.cycloneii_ram_register
-# Loading cycloneii_ver.cycloneii_ram_pulse_generator
-# Loading work.hill_cipher_vlg_sample_tst
-# Loading work.hill_cipher_vlg_check_tst
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
+# Loading work.key_loader_vlg_sample_tst
+# Loading work.key_loader_vlg_check_tst
 # SDF 10.1d Compiler 2012.11 Nov  2 2012
 # 
 # Loading instances from HillCipher_v.sdo
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Loading timing data from HillCipher_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /hill_cipher_vlg_vec_tst File: HillCipher.vt
-# ERROR! Vector Mismatch for output port c1[2] :: @time = 2000000.000 ps
-#      Expected value = 0000
-#      Real value = 0100
-# ERROR! Vector Mismatch for output port c2[1] :: @time = 2000000.000 ps
-#      Expected value = 0000
-#      Real value = 0010
-# ERROR! Vector Mismatch for output port c3[1] :: @time = 2000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port c3[2] :: @time = 2000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port c3[3] :: @time = 2000000.000 ps
-#      Expected value = 0000
-#      Real value = 1110
-# ERROR! Vector Mismatch for output port c1[0] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1011
-# ERROR! Vector Mismatch for output port c1[1] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1011
-# ERROR! Vector Mismatch for output port c1[3] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1011
-# ERROR! Vector Mismatch for output port c2[0] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1101
-# ERROR! Vector Mismatch for output port c2[2] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1101
-# ERROR! Vector Mismatch for output port c2[3] :: @time = 2100000.000 ps
-#      Expected value = 0000
-#      Real value = 1101
-# ERROR! Vector Mismatch for output port c3[0] :: @time = 2400000.000 ps
-#      Expected value = 0000
-#      Real value = 0001
-#          12 mismatched vectors : Simulation failed !
-# ** Note: $finish    : HillCipher.vt(383)
-#    Time: 5 us  Iteration: 0  Instance: /hill_cipher_vlg_vec_tst/tb_out
+#    Time: 0 ps  Iteration: 0  Instance: /key_loader_vlg_vec_tst File: HillCipher.vt
+# Simulation passed !
+# ** Note: $finish    : HillCipher.vt(849)
+#    Time: 2 us  Iteration: 0  Instance: /key_loader_vlg_vec_tst/tb_out

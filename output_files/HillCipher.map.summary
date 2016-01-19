@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Jan 16 14:49:54 2016
+Analysis & Synthesis Status : Successful - Tue Jan 19 11:30:56 2016
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : HillCipher
-Top-level Entity Name : hill_cipher
+Top-level Entity Name : key_loader_struct
 Family : Cyclone II
-Total logic elements : 712
-    Total combinational functions : 627
-    Dedicated logic registers : 247
-Total registers : 247
-Total pins : 27
+Total logic elements : 36
+    Total combinational functions : 0
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 50
 Total virtual pins : 0
-Total memory bits : 64
+Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
