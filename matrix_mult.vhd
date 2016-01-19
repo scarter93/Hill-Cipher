@@ -1,7 +1,7 @@
 -- entity name: matrix_mult
 -- Stephen Carter - 260500858
 
--- Copyright (C) 2015 Stephen Carter
+-- Copyright (C) 2016 Stephen Carter
 -- Version 1.0 
 -- Author: Stephen Carter; stephen.carter@mail.mcgill.ca
 -- Date: Jan. 07, 2016
@@ -14,11 +14,11 @@ use ieee.std_logic_arith.all;		-- arithmetic operators
 use ieee.std_logic_unsigned.all;	-- Treat vectors as unsigned
 
 entity matrix_mult is
-	port(	p1	:	in std_logic_vector(3 downto 0);		-- inputs of 1x3 vector
+	port(	p1	:	in std_logic_vector(3 downto 0);		-- inputs of 1x3 vector (plaintext)
 			p2	:	in std_logic_vector(3 downto 0);
 			p3	:	in std_logic_vector(3 downto 0);
 			
-			k11	:	in std_logic_vector(3 downto 0);	-- inputs of 3x3 key_loader
+			k11	:	in std_logic_vector(3 downto 0);	-- inputs of 3x3 key_loader (encryption key)
 			k12	:	in std_logic_vector(3 downto 0);
 			k13	:	in std_logic_vector(3 downto 0);
 			
@@ -32,7 +32,7 @@ entity matrix_mult is
 			
 			clk	:	in std_logic;							-- clock for synch
 			
-			c1	:	out std_logic_vector(3 downto 0);	-- output vector
+			c1	:	out std_logic_vector(3 downto 0);	-- output vector (ciphertext)
 			c2 :	out std_logic_vector(3 downto 0);
 			c3 :	out std_logic_vector(3 downto 0)
 		);

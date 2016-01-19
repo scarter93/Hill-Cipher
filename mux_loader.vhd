@@ -1,15 +1,22 @@
 --entity name: mux_loader
 -- Stephen Carter
 
+-- Copyright (C) 2016 Stephen Carter
+-- Version 1.0 
+-- Author: Stephen Carter; stephen.carter@mail.mcgill.ca
+-- Date: Jan. 17, 2016
+
+-- This selects either the decryption or encryption key to be used
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;		-- arithmetic operators
 use ieee.std_logic_unsigned.all;	-- Treat vectors as unsigned
 
 entity mux_loader is
-	port(	encrypt	:	in std_logic;
+	port(	encrypt	:	in std_logic;	-- acts as a select (encryption when high)
 	
-			ek11		:	in std_logic_vector(3 downto 0);
+			ek11		:	in std_logic_vector(3 downto 0);		--encryption key values
 			ek12		:	in std_logic_vector(3 downto 0);
 			ek13		:	in std_logic_vector(3 downto 0);
 			
@@ -35,7 +42,7 @@ entity mux_loader is
 			
 			clk		:	in std_logic;
 			
-			s11		:	out std_logic_vector(3 downto 0);
+			s11		:	out std_logic_vector(3 downto 0);	-- decryption key values
 			s12		:	out std_logic_vector(3 downto 0);
 			s13		:	out std_logic_vector(3 downto 0);
 			
@@ -55,7 +62,7 @@ architecture implementation of mux_loader is
 begin
 	select_matrix : process(clk)
 		begin
-			case encrypt is
+			case encrypt is	-- if encrypt is high select encryption key
 				when '1' =>
 					s11 <= ek11;
 					s12 <= ek12;
@@ -68,7 +75,7 @@ begin
 					s31 <= ek31;
 					s32 <= ek32;
 					s33 <= ek33;
-				when '0' =>
+				when '0' =>		-- if encrypt is low select decryption key
 					s11 <= dk11;
 					s12 <= dk12;
 					s13 <= dk13;

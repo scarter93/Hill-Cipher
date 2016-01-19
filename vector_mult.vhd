@@ -1,7 +1,7 @@
 -- entity name: vector_mult
 -- Stephen Carter - 260500858
 
--- Copyright (C) 2015 Stephen Carter
+-- Copyright (C) 2016 Stephen Carter
 -- Version 1.0 
 -- Author: Stephen Carter; stephen.carter@mail.mcgill.ca
 -- Date: Jan. 10, 2016
@@ -16,17 +16,17 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;	-- Treat vectors as unsigned
 
 entity vector_mult is
-	port(	p1		:	in std_logic_vector(3 downto 0);	-- inputs of 1x3 vector
+	port(	p1		:	in std_logic_vector(3 downto 0);	-- inputs of 1x3 vector (plaintext)
 			p2		:	in std_logic_vector(3 downto 0);
 			p3		:	in std_logic_vector(3 downto 0);
 			
-			k1x	:	in std_logic_vector(3 downto 0);	-- inputs of keyloader column
+			k1x	:	in std_logic_vector(3 downto 0);	-- inputs of keyloader column (encryption key)
 			k2x	:	in std_logic_vector(3 downto 0);
 			k3x	:	in std_logic_vector(3 downto 0);
 			
 			clk	:	in std_logic;							-- clock for synch
 			
-			cx		:	out std_logic_vector(3 downto 0)	-- output
+			cx		:	out std_logic_vector(3 downto 0)	-- output (ciphertext)
 		);
 
 end vector_mult;
