@@ -1,0 +1,1381 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "01/21/2016 10:39:02"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    key_inverter
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module key_inverter_vlg_sample_tst(
+	clk,
+	ek11,
+	ek12,
+	ek13,
+	ek21,
+	ek22,
+	ek23,
+	ek31,
+	ek32,
+	ek33,
+	sampler_tx
+);
+input  clk;
+input [3:0] ek11;
+input [3:0] ek12;
+input [3:0] ek13;
+input [3:0] ek21;
+input [3:0] ek22;
+input [3:0] ek23;
+input [3:0] ek31;
+input [3:0] ek32;
+input [3:0] ek33;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or ek11 or ek12 or ek13 or ek21 or ek22 or ek23 or ek31 or ek32 or ek33)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module key_inverter_vlg_check_tst (
+	dk11,
+	dk12,
+	dk13,
+	dk21,
+	dk22,
+	dk23,
+	dk31,
+	dk32,
+	dk33,
+	sampler_rx
+);
+input [3:0] dk11;
+input [3:0] dk12;
+input [3:0] dk13;
+input [3:0] dk21;
+input [3:0] dk22;
+input [3:0] dk23;
+input [3:0] dk31;
+input [3:0] dk32;
+input [3:0] dk33;
+input sampler_rx;
+
+reg [3:0] dk11_expected;
+reg [3:0] dk12_expected;
+reg [3:0] dk13_expected;
+reg [3:0] dk21_expected;
+reg [3:0] dk22_expected;
+reg [3:0] dk23_expected;
+reg [3:0] dk31_expected;
+reg [3:0] dk32_expected;
+reg [3:0] dk33_expected;
+
+reg [3:0] dk11_prev;
+reg [3:0] dk12_prev;
+reg [3:0] dk13_prev;
+reg [3:0] dk21_prev;
+reg [3:0] dk22_prev;
+reg [3:0] dk23_prev;
+reg [3:0] dk31_prev;
+reg [3:0] dk32_prev;
+reg [3:0] dk33_prev;
+
+reg [3:0] dk11_expected_prev;
+reg [3:0] dk12_expected_prev;
+reg [3:0] dk13_expected_prev;
+reg [3:0] dk21_expected_prev;
+reg [3:0] dk22_expected_prev;
+reg [3:0] dk23_expected_prev;
+reg [3:0] dk31_expected_prev;
+reg [3:0] dk32_expected_prev;
+reg [3:0] dk33_expected_prev;
+
+reg [3:0] last_dk11_exp;
+reg [3:0] last_dk12_exp;
+reg [3:0] last_dk13_exp;
+reg [3:0] last_dk21_exp;
+reg [3:0] last_dk22_exp;
+reg [3:0] last_dk23_exp;
+reg [3:0] last_dk31_exp;
+reg [3:0] last_dk32_exp;
+reg [3:0] last_dk33_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:9] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 9'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	dk11_prev = dk11;
+	dk12_prev = dk12;
+	dk13_prev = dk13;
+	dk21_prev = dk21;
+	dk22_prev = dk22;
+	dk23_prev = dk23;
+	dk31_prev = dk31;
+	dk32_prev = dk32;
+	dk33_prev = dk33;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	dk11_expected_prev = dk11_expected;
+	dk12_expected_prev = dk12_expected;
+	dk13_expected_prev = dk13_expected;
+	dk21_expected_prev = dk21_expected;
+	dk22_expected_prev = dk22_expected;
+	dk23_expected_prev = dk23_expected;
+	dk31_expected_prev = dk31_expected;
+	dk32_expected_prev = dk32_expected;
+	dk33_expected_prev = dk33_expected;
+end
+
+
+// expected dk11[ 3 ]
+initial
+begin
+	dk11_expected[3] = 1'bX;
+	dk11_expected[3] = #999000 1'b0;
+end 
+// expected dk11[ 2 ]
+initial
+begin
+	dk11_expected[2] = 1'bX;
+	dk11_expected[2] = #999000 1'b0;
+end 
+// expected dk11[ 1 ]
+initial
+begin
+	dk11_expected[1] = 1'bX;
+	dk11_expected[1] = #999000 1'b0;
+end 
+// expected dk11[ 0 ]
+initial
+begin
+	dk11_expected[0] = 1'bX;
+	dk11_expected[0] = #999000 1'b0;
+end 
+// expected dk12[ 3 ]
+initial
+begin
+	dk12_expected[3] = 1'bX;
+	dk12_expected[3] = #999000 1'b0;
+end 
+// expected dk12[ 2 ]
+initial
+begin
+	dk12_expected[2] = 1'bX;
+	dk12_expected[2] = #999000 1'b0;
+end 
+// expected dk12[ 1 ]
+initial
+begin
+	dk12_expected[1] = 1'bX;
+	dk12_expected[1] = #999000 1'b0;
+end 
+// expected dk12[ 0 ]
+initial
+begin
+	dk12_expected[0] = 1'bX;
+	dk12_expected[0] = #999000 1'b0;
+end 
+// expected dk13[ 3 ]
+initial
+begin
+	dk13_expected[3] = 1'bX;
+	dk13_expected[3] = #999000 1'b0;
+end 
+// expected dk13[ 2 ]
+initial
+begin
+	dk13_expected[2] = 1'bX;
+	dk13_expected[2] = #999000 1'b0;
+end 
+// expected dk13[ 1 ]
+initial
+begin
+	dk13_expected[1] = 1'bX;
+	dk13_expected[1] = #999000 1'b0;
+end 
+// expected dk13[ 0 ]
+initial
+begin
+	dk13_expected[0] = 1'bX;
+	dk13_expected[0] = #999000 1'b0;
+end 
+// expected dk21[ 3 ]
+initial
+begin
+	dk21_expected[3] = 1'bX;
+	dk21_expected[3] = #999000 1'b0;
+end 
+// expected dk21[ 2 ]
+initial
+begin
+	dk21_expected[2] = 1'bX;
+	dk21_expected[2] = #999000 1'b0;
+end 
+// expected dk21[ 1 ]
+initial
+begin
+	dk21_expected[1] = 1'bX;
+	dk21_expected[1] = #999000 1'b0;
+end 
+// expected dk21[ 0 ]
+initial
+begin
+	dk21_expected[0] = 1'bX;
+	dk21_expected[0] = #999000 1'b0;
+end 
+// expected dk22[ 3 ]
+initial
+begin
+	dk22_expected[3] = 1'bX;
+	dk22_expected[3] = #999000 1'b0;
+end 
+// expected dk22[ 2 ]
+initial
+begin
+	dk22_expected[2] = 1'bX;
+	dk22_expected[2] = #999000 1'b0;
+end 
+// expected dk22[ 1 ]
+initial
+begin
+	dk22_expected[1] = 1'bX;
+	dk22_expected[1] = #999000 1'b0;
+end 
+// expected dk22[ 0 ]
+initial
+begin
+	dk22_expected[0] = 1'bX;
+	dk22_expected[0] = #999000 1'b0;
+end 
+// expected dk23[ 3 ]
+initial
+begin
+	dk23_expected[3] = 1'bX;
+	dk23_expected[3] = #999000 1'b0;
+end 
+// expected dk23[ 2 ]
+initial
+begin
+	dk23_expected[2] = 1'bX;
+	dk23_expected[2] = #999000 1'b0;
+end 
+// expected dk23[ 1 ]
+initial
+begin
+	dk23_expected[1] = 1'bX;
+	dk23_expected[1] = #999000 1'b0;
+end 
+// expected dk23[ 0 ]
+initial
+begin
+	dk23_expected[0] = 1'bX;
+	dk23_expected[0] = #999000 1'b0;
+end 
+// expected dk31[ 3 ]
+initial
+begin
+	dk31_expected[3] = 1'bX;
+	dk31_expected[3] = #999000 1'b0;
+end 
+// expected dk31[ 2 ]
+initial
+begin
+	dk31_expected[2] = 1'bX;
+	dk31_expected[2] = #999000 1'b0;
+end 
+// expected dk31[ 1 ]
+initial
+begin
+	dk31_expected[1] = 1'bX;
+	dk31_expected[1] = #999000 1'b0;
+end 
+// expected dk31[ 0 ]
+initial
+begin
+	dk31_expected[0] = 1'bX;
+	dk31_expected[0] = #999000 1'b0;
+end 
+// expected dk32[ 3 ]
+initial
+begin
+	dk32_expected[3] = 1'bX;
+	dk32_expected[3] = #999000 1'b0;
+end 
+// expected dk32[ 2 ]
+initial
+begin
+	dk32_expected[2] = 1'bX;
+	dk32_expected[2] = #999000 1'b0;
+end 
+// expected dk32[ 1 ]
+initial
+begin
+	dk32_expected[1] = 1'bX;
+	dk32_expected[1] = #999000 1'b0;
+end 
+// expected dk32[ 0 ]
+initial
+begin
+	dk32_expected[0] = 1'bX;
+	dk32_expected[0] = #999000 1'b0;
+end 
+// expected dk33[ 3 ]
+initial
+begin
+	dk33_expected[3] = 1'bX;
+	dk33_expected[3] = #999000 1'b0;
+end 
+// expected dk33[ 2 ]
+initial
+begin
+	dk33_expected[2] = 1'bX;
+	dk33_expected[2] = #999000 1'b0;
+end 
+// expected dk33[ 1 ]
+initial
+begin
+	dk33_expected[1] = 1'bX;
+	dk33_expected[1] = #999000 1'b0;
+end 
+// expected dk33[ 0 ]
+initial
+begin
+	dk33_expected[0] = 1'bX;
+	dk33_expected[0] = #999000 1'b0;
+end 
+// generate trigger
+always @(dk11_expected or dk11 or dk12_expected or dk12 or dk13_expected or dk13 or dk21_expected or dk21 or dk22_expected or dk22 or dk23_expected or dk23 or dk31_expected or dk31 or dk32_expected or dk32 or dk33_expected or dk33)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected dk11 = %b | expected dk12 = %b | expected dk13 = %b | expected dk21 = %b | expected dk22 = %b | expected dk23 = %b | expected dk31 = %b | expected dk32 = %b | expected dk33 = %b | ",dk11_expected_prev,dk12_expected_prev,dk13_expected_prev,dk21_expected_prev,dk22_expected_prev,dk23_expected_prev,dk31_expected_prev,dk32_expected_prev,dk33_expected_prev);
+	$display("| real dk11 = %b | real dk12 = %b | real dk13 = %b | real dk21 = %b | real dk22 = %b | real dk23 = %b | real dk31 = %b | real dk32 = %b | real dk33 = %b | ",dk11_prev,dk12_prev,dk13_prev,dk21_prev,dk22_prev,dk23_prev,dk31_prev,dk32_prev,dk33_prev);
+`endif
+	if (
+		( dk11_expected_prev[0] !== 1'bx ) && ( dk11_prev[0] !== dk11_expected_prev[0] )
+		&& ((dk11_expected_prev[0] !== last_dk11_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk11[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk11_expected_prev);
+		$display ("     Real value = %b", dk11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dk11_exp[0] = dk11_expected_prev[0];
+	end
+	if (
+		( dk11_expected_prev[1] !== 1'bx ) && ( dk11_prev[1] !== dk11_expected_prev[1] )
+		&& ((dk11_expected_prev[1] !== last_dk11_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk11[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk11_expected_prev);
+		$display ("     Real value = %b", dk11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dk11_exp[1] = dk11_expected_prev[1];
+	end
+	if (
+		( dk11_expected_prev[2] !== 1'bx ) && ( dk11_prev[2] !== dk11_expected_prev[2] )
+		&& ((dk11_expected_prev[2] !== last_dk11_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk11[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk11_expected_prev);
+		$display ("     Real value = %b", dk11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dk11_exp[2] = dk11_expected_prev[2];
+	end
+	if (
+		( dk11_expected_prev[3] !== 1'bx ) && ( dk11_prev[3] !== dk11_expected_prev[3] )
+		&& ((dk11_expected_prev[3] !== last_dk11_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk11[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk11_expected_prev);
+		$display ("     Real value = %b", dk11_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_dk11_exp[3] = dk11_expected_prev[3];
+	end
+	if (
+		( dk12_expected_prev[0] !== 1'bx ) && ( dk12_prev[0] !== dk12_expected_prev[0] )
+		&& ((dk12_expected_prev[0] !== last_dk12_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk12[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk12_expected_prev);
+		$display ("     Real value = %b", dk12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dk12_exp[0] = dk12_expected_prev[0];
+	end
+	if (
+		( dk12_expected_prev[1] !== 1'bx ) && ( dk12_prev[1] !== dk12_expected_prev[1] )
+		&& ((dk12_expected_prev[1] !== last_dk12_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk12[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk12_expected_prev);
+		$display ("     Real value = %b", dk12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dk12_exp[1] = dk12_expected_prev[1];
+	end
+	if (
+		( dk12_expected_prev[2] !== 1'bx ) && ( dk12_prev[2] !== dk12_expected_prev[2] )
+		&& ((dk12_expected_prev[2] !== last_dk12_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk12[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk12_expected_prev);
+		$display ("     Real value = %b", dk12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dk12_exp[2] = dk12_expected_prev[2];
+	end
+	if (
+		( dk12_expected_prev[3] !== 1'bx ) && ( dk12_prev[3] !== dk12_expected_prev[3] )
+		&& ((dk12_expected_prev[3] !== last_dk12_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk12[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk12_expected_prev);
+		$display ("     Real value = %b", dk12_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_dk12_exp[3] = dk12_expected_prev[3];
+	end
+	if (
+		( dk13_expected_prev[0] !== 1'bx ) && ( dk13_prev[0] !== dk13_expected_prev[0] )
+		&& ((dk13_expected_prev[0] !== last_dk13_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk13[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk13_expected_prev);
+		$display ("     Real value = %b", dk13_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_dk13_exp[0] = dk13_expected_prev[0];
+	end
+	if (
+		( dk13_expected_prev[1] !== 1'bx ) && ( dk13_prev[1] !== dk13_expected_prev[1] )
+		&& ((dk13_expected_prev[1] !== last_dk13_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk13[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk13_expected_prev);
+		$display ("     Real value = %b", dk13_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_dk13_exp[1] = dk13_expected_prev[1];
+	end
+	if (
+		( dk13_expected_prev[2] !== 1'bx ) && ( dk13_prev[2] !== dk13_expected_prev[2] )
+		&& ((dk13_expected_prev[2] !== last_dk13_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk13[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk13_expected_prev);
+		$display ("     Real value = %b", dk13_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_dk13_exp[2] = dk13_expected_prev[2];
+	end
+	if (
+		( dk13_expected_prev[3] !== 1'bx ) && ( dk13_prev[3] !== dk13_expected_prev[3] )
+		&& ((dk13_expected_prev[3] !== last_dk13_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk13[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk13_expected_prev);
+		$display ("     Real value = %b", dk13_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_dk13_exp[3] = dk13_expected_prev[3];
+	end
+	if (
+		( dk21_expected_prev[0] !== 1'bx ) && ( dk21_prev[0] !== dk21_expected_prev[0] )
+		&& ((dk21_expected_prev[0] !== last_dk21_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk21[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk21_expected_prev);
+		$display ("     Real value = %b", dk21_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_dk21_exp[0] = dk21_expected_prev[0];
+	end
+	if (
+		( dk21_expected_prev[1] !== 1'bx ) && ( dk21_prev[1] !== dk21_expected_prev[1] )
+		&& ((dk21_expected_prev[1] !== last_dk21_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk21[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk21_expected_prev);
+		$display ("     Real value = %b", dk21_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_dk21_exp[1] = dk21_expected_prev[1];
+	end
+	if (
+		( dk21_expected_prev[2] !== 1'bx ) && ( dk21_prev[2] !== dk21_expected_prev[2] )
+		&& ((dk21_expected_prev[2] !== last_dk21_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk21[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk21_expected_prev);
+		$display ("     Real value = %b", dk21_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_dk21_exp[2] = dk21_expected_prev[2];
+	end
+	if (
+		( dk21_expected_prev[3] !== 1'bx ) && ( dk21_prev[3] !== dk21_expected_prev[3] )
+		&& ((dk21_expected_prev[3] !== last_dk21_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk21[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk21_expected_prev);
+		$display ("     Real value = %b", dk21_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_dk21_exp[3] = dk21_expected_prev[3];
+	end
+	if (
+		( dk22_expected_prev[0] !== 1'bx ) && ( dk22_prev[0] !== dk22_expected_prev[0] )
+		&& ((dk22_expected_prev[0] !== last_dk22_exp[0]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk22[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk22_expected_prev);
+		$display ("     Real value = %b", dk22_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_dk22_exp[0] = dk22_expected_prev[0];
+	end
+	if (
+		( dk22_expected_prev[1] !== 1'bx ) && ( dk22_prev[1] !== dk22_expected_prev[1] )
+		&& ((dk22_expected_prev[1] !== last_dk22_exp[1]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk22[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk22_expected_prev);
+		$display ("     Real value = %b", dk22_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_dk22_exp[1] = dk22_expected_prev[1];
+	end
+	if (
+		( dk22_expected_prev[2] !== 1'bx ) && ( dk22_prev[2] !== dk22_expected_prev[2] )
+		&& ((dk22_expected_prev[2] !== last_dk22_exp[2]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk22[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk22_expected_prev);
+		$display ("     Real value = %b", dk22_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_dk22_exp[2] = dk22_expected_prev[2];
+	end
+	if (
+		( dk22_expected_prev[3] !== 1'bx ) && ( dk22_prev[3] !== dk22_expected_prev[3] )
+		&& ((dk22_expected_prev[3] !== last_dk22_exp[3]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk22[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk22_expected_prev);
+		$display ("     Real value = %b", dk22_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_dk22_exp[3] = dk22_expected_prev[3];
+	end
+	if (
+		( dk23_expected_prev[0] !== 1'bx ) && ( dk23_prev[0] !== dk23_expected_prev[0] )
+		&& ((dk23_expected_prev[0] !== last_dk23_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk23[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk23_expected_prev);
+		$display ("     Real value = %b", dk23_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_dk23_exp[0] = dk23_expected_prev[0];
+	end
+	if (
+		( dk23_expected_prev[1] !== 1'bx ) && ( dk23_prev[1] !== dk23_expected_prev[1] )
+		&& ((dk23_expected_prev[1] !== last_dk23_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk23[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk23_expected_prev);
+		$display ("     Real value = %b", dk23_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_dk23_exp[1] = dk23_expected_prev[1];
+	end
+	if (
+		( dk23_expected_prev[2] !== 1'bx ) && ( dk23_prev[2] !== dk23_expected_prev[2] )
+		&& ((dk23_expected_prev[2] !== last_dk23_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk23[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk23_expected_prev);
+		$display ("     Real value = %b", dk23_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_dk23_exp[2] = dk23_expected_prev[2];
+	end
+	if (
+		( dk23_expected_prev[3] !== 1'bx ) && ( dk23_prev[3] !== dk23_expected_prev[3] )
+		&& ((dk23_expected_prev[3] !== last_dk23_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk23[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk23_expected_prev);
+		$display ("     Real value = %b", dk23_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_dk23_exp[3] = dk23_expected_prev[3];
+	end
+	if (
+		( dk31_expected_prev[0] !== 1'bx ) && ( dk31_prev[0] !== dk31_expected_prev[0] )
+		&& ((dk31_expected_prev[0] !== last_dk31_exp[0]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk31[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk31_expected_prev);
+		$display ("     Real value = %b", dk31_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_dk31_exp[0] = dk31_expected_prev[0];
+	end
+	if (
+		( dk31_expected_prev[1] !== 1'bx ) && ( dk31_prev[1] !== dk31_expected_prev[1] )
+		&& ((dk31_expected_prev[1] !== last_dk31_exp[1]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk31[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk31_expected_prev);
+		$display ("     Real value = %b", dk31_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_dk31_exp[1] = dk31_expected_prev[1];
+	end
+	if (
+		( dk31_expected_prev[2] !== 1'bx ) && ( dk31_prev[2] !== dk31_expected_prev[2] )
+		&& ((dk31_expected_prev[2] !== last_dk31_exp[2]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk31[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk31_expected_prev);
+		$display ("     Real value = %b", dk31_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_dk31_exp[2] = dk31_expected_prev[2];
+	end
+	if (
+		( dk31_expected_prev[3] !== 1'bx ) && ( dk31_prev[3] !== dk31_expected_prev[3] )
+		&& ((dk31_expected_prev[3] !== last_dk31_exp[3]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk31[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk31_expected_prev);
+		$display ("     Real value = %b", dk31_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_dk31_exp[3] = dk31_expected_prev[3];
+	end
+	if (
+		( dk32_expected_prev[0] !== 1'bx ) && ( dk32_prev[0] !== dk32_expected_prev[0] )
+		&& ((dk32_expected_prev[0] !== last_dk32_exp[0]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk32[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk32_expected_prev);
+		$display ("     Real value = %b", dk32_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_dk32_exp[0] = dk32_expected_prev[0];
+	end
+	if (
+		( dk32_expected_prev[1] !== 1'bx ) && ( dk32_prev[1] !== dk32_expected_prev[1] )
+		&& ((dk32_expected_prev[1] !== last_dk32_exp[1]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk32[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk32_expected_prev);
+		$display ("     Real value = %b", dk32_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_dk32_exp[1] = dk32_expected_prev[1];
+	end
+	if (
+		( dk32_expected_prev[2] !== 1'bx ) && ( dk32_prev[2] !== dk32_expected_prev[2] )
+		&& ((dk32_expected_prev[2] !== last_dk32_exp[2]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk32[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk32_expected_prev);
+		$display ("     Real value = %b", dk32_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_dk32_exp[2] = dk32_expected_prev[2];
+	end
+	if (
+		( dk32_expected_prev[3] !== 1'bx ) && ( dk32_prev[3] !== dk32_expected_prev[3] )
+		&& ((dk32_expected_prev[3] !== last_dk32_exp[3]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk32[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk32_expected_prev);
+		$display ("     Real value = %b", dk32_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_dk32_exp[3] = dk32_expected_prev[3];
+	end
+	if (
+		( dk33_expected_prev[0] !== 1'bx ) && ( dk33_prev[0] !== dk33_expected_prev[0] )
+		&& ((dk33_expected_prev[0] !== last_dk33_exp[0]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk33[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk33_expected_prev);
+		$display ("     Real value = %b", dk33_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_dk33_exp[0] = dk33_expected_prev[0];
+	end
+	if (
+		( dk33_expected_prev[1] !== 1'bx ) && ( dk33_prev[1] !== dk33_expected_prev[1] )
+		&& ((dk33_expected_prev[1] !== last_dk33_exp[1]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk33[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk33_expected_prev);
+		$display ("     Real value = %b", dk33_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_dk33_exp[1] = dk33_expected_prev[1];
+	end
+	if (
+		( dk33_expected_prev[2] !== 1'bx ) && ( dk33_prev[2] !== dk33_expected_prev[2] )
+		&& ((dk33_expected_prev[2] !== last_dk33_exp[2]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk33[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk33_expected_prev);
+		$display ("     Real value = %b", dk33_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_dk33_exp[2] = dk33_expected_prev[2];
+	end
+	if (
+		( dk33_expected_prev[3] !== 1'bx ) && ( dk33_prev[3] !== dk33_expected_prev[3] )
+		&& ((dk33_expected_prev[3] !== last_dk33_exp[3]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port dk33[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", dk33_expected_prev);
+		$display ("     Real value = %b", dk33_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_dk33_exp[3] = dk33_expected_prev[3];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#8000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module key_inverter_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [3:0] ek11;
+reg [3:0] ek12;
+reg [3:0] ek13;
+reg [3:0] ek21;
+reg [3:0] ek22;
+reg [3:0] ek23;
+reg [3:0] ek31;
+reg [3:0] ek32;
+reg [3:0] ek33;
+// wires                                               
+wire [3:0] dk11;
+wire [3:0] dk12;
+wire [3:0] dk13;
+wire [3:0] dk21;
+wire [3:0] dk22;
+wire [3:0] dk23;
+wire [3:0] dk31;
+wire [3:0] dk32;
+wire [3:0] dk33;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+key_inverter i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.dk11(dk11),
+	.dk12(dk12),
+	.dk13(dk13),
+	.dk21(dk21),
+	.dk22(dk22),
+	.dk23(dk23),
+	.dk31(dk31),
+	.dk32(dk32),
+	.dk33(dk33),
+	.ek11(ek11),
+	.ek12(ek12),
+	.ek13(ek13),
+	.ek21(ek21),
+	.ek22(ek22),
+	.ek23(ek23),
+	.ek31(ek31),
+	.ek32(ek32),
+	.ek33(ek33)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #50000 1'b1;
+	#50000;
+end 
+// ek11[ 3 ]
+initial
+begin
+	ek11[3] = 1'b0;
+	ek11[3] = #1000000 1'b1;
+	ek11[3] = #2000000 1'b0;
+	ek11[3] = #2000000 1'b1;
+	ek11[3] = #1000000 1'b0;
+	ek11[3] = #100000 1'b1;
+	ek11[3] = #200000 1'b0;
+	ek11[3] = #200000 1'b1;
+end 
+// ek11[ 2 ]
+initial
+begin
+	ek11[2] = 1'b0;
+	ek11[2] = #2000000 1'b1;
+	ek11[2] = #2000000 1'b0;
+	ek11[2] = #1000000 1'b1;
+	ek11[2] = #1000000 1'b0;
+	ek11[2] = #200000 1'b1;
+	ek11[2] = #200000 1'b0;
+	ek11[2] = #100000 1'b1;
+end 
+// ek11[ 1 ]
+initial
+begin
+	ek11[1] = 1'b0;
+	ek11[1] = #1000000 1'b1;
+	ek11[1] = #1000000 1'b0;
+	ek11[1] = #2000000 1'b1;
+	ek11[1] = #1000000 1'b0;
+	ek11[1] = #1100000 1'b1;
+	ek11[1] = #100000 1'b0;
+	ek11[1] = #200000 1'b1;
+	ek11[1] = #100000 1'b0;
+end 
+// ek11[ 0 ]
+initial
+begin
+	ek11[0] = 1'b1;
+	ek11[0] = #1000000 1'b0;
+	ek11[0] = #2000000 1'b1;
+	ek11[0] = #1000000 1'b0;
+	ek11[0] = #1000000 1'b1;
+	ek11[0] = #1100000 1'b0;
+	ek11[0] = #200000 1'b1;
+	ek11[0] = #100000 1'b0;
+	ek11[0] = #100000 1'b1;
+end 
+// ek12[ 3 ]
+initial
+begin
+	ek12[3] = 1'b0;
+	ek12[3] = #2000000 1'b1;
+	ek12[3] = #1000000 1'b0;
+	ek12[3] = #1000000 1'b1;
+	ek12[3] = #1000000 1'b0;
+	ek12[3] = #1200000 1'b1;
+	ek12[3] = #100000 1'b0;
+	ek12[3] = #100000 1'b1;
+	ek12[3] = #100000 1'b0;
+end 
+// ek12[ 2 ]
+initial
+begin
+	ek12[2] = 1'b0;
+	ek12[2] = #1000000 1'b1;
+	ek12[2] = #3000000 1'b0;
+	ek12[2] = #2100000 1'b1;
+	ek12[2] = #300000 1'b0;
+end 
+// ek12[ 1 ]
+initial
+begin
+	ek12[1] = 1'b1;
+	ek12[1] = #1000000 1'b0;
+	ek12[1] = #2000000 1'b1;
+	ek12[1] = #2000000 1'b0;
+	ek12[1] = #1000000 1'b1;
+	ek12[1] = #100000 1'b0;
+	ek12[1] = #200000 1'b1;
+	ek12[1] = #200000 1'b0;
+end 
+// ek12[ 0 ]
+initial
+begin
+	ek12[0] = 1'b0;
+	ek12[0] = #2000000 1'b1;
+	ek12[0] = #2000000 1'b0;
+	ek12[0] = #1000000 1'b1;
+	ek12[0] = #1000000 1'b0;
+	ek12[0] = #200000 1'b1;
+	ek12[0] = #200000 1'b0;
+	ek12[0] = #100000 1'b1;
+end 
+// ek13[ 3 ]
+initial
+begin
+	ek13[3] = 1'b0;
+	ek13[3] = #3000000 1'b1;
+	ek13[3] = #1000000 1'b0;
+	ek13[3] = #2300000 1'b1;
+	ek13[3] = #100000 1'b0;
+end 
+// ek13[ 2 ]
+initial
+begin
+	ek13[2] = 1'b0;
+	ek13[2] = #2000000 1'b1;
+	ek13[2] = #1000000 1'b0;
+	ek13[2] = #1000000 1'b1;
+	ek13[2] = #2000000 1'b0;
+	ek13[2] = #200000 1'b1;
+	ek13[2] = #100000 1'b0;
+	ek13[2] = #100000 1'b1;
+end 
+// ek13[ 1 ]
+initial
+begin
+	ek13[1] = 1'b1;
+	ek13[1] = #1000000 1'b0;
+	ek13[1] = #1000000 1'b1;
+	ek13[1] = #1000000 1'b0;
+	ek13[1] = #1000000 1'b1;
+	ek13[1] = #2100000 1'b0;
+	ek13[1] = #100000 1'b1;
+	ek13[1] = #100000 1'b0;
+	ek13[1] = #100000 1'b1;
+end 
+// ek13[ 0 ]
+initial
+begin
+	ek13[0] = 1'b1;
+	ek13[0] = #2000000 1'b0;
+	ek13[0] = #1000000 1'b1;
+	ek13[0] = #2000000 1'b0;
+	ek13[0] = #1000000 1'b1;
+	ek13[0] = #200000 1'b0;
+	ek13[0] = #100000 1'b1;
+	ek13[0] = #200000 1'b0;
+end 
+// ek21[ 3 ]
+initial
+begin
+	ek21[3] = 1'b0;
+	ek21[3] = #1000000 1'b1;
+	ek21[3] = #1000000 1'b0;
+	ek21[3] = #2000000 1'b1;
+	ek21[3] = #2000000 1'b0;
+	ek21[3] = #100000 1'b1;
+	ek21[3] = #100000 1'b0;
+	ek21[3] = #200000 1'b1;
+end 
+// ek21[ 2 ]
+initial
+begin
+	ek21[2] = 1'b1;
+	ek21[2] = #1000000 1'b0;
+	ek21[2] = #1000000 1'b1;
+	ek21[2] = #2000000 1'b0;
+	ek21[2] = #1000000 1'b1;
+	ek21[2] = #1100000 1'b0;
+	ek21[2] = #100000 1'b1;
+	ek21[2] = #200000 1'b0;
+	ek21[2] = #100000 1'b1;
+end 
+// ek21[ 1 ]
+initial
+begin
+	ek21[1] = 1'b0;
+	ek21[1] = #1000000 1'b1;
+	ek21[1] = #1000000 1'b0;
+	ek21[1] = #4100000 1'b1;
+	ek21[1] = #100000 1'b0;
+end 
+// ek21[ 0 ]
+initial
+begin
+	ek21[0] = 1'b0;
+	ek21[0] = #3000000 1'b1;
+	ek21[0] = #2000000 1'b0;
+	ek21[0] = #1300000 1'b1;
+	ek21[0] = #200000 1'b0;
+end 
+// ek22[ 3 ]
+initial
+begin
+	ek22[3] = 1'b0;
+	ek22[3] = #1000000 1'b1;
+	ek22[3] = #1000000 1'b0;
+	ek22[3] = #1000000 1'b1;
+	ek22[3] = #3000000 1'b0;
+	ek22[3] = #100000 1'b1;
+	ek22[3] = #100000 1'b0;
+	ek22[3] = #100000 1'b1;
+end 
+// ek22[ 2 ]
+initial
+begin
+	ek22[2] = 1'b1;
+	ek22[2] = #1000000 1'b0;
+	ek22[2] = #3000000 1'b1;
+	ek22[2] = #2100000 1'b0;
+	ek22[2] = #300000 1'b1;
+end 
+// ek22[ 1 ]
+initial
+begin
+	ek22[1] = 1'b0;
+	ek22[1] = #2000000 1'b1;
+	ek22[1] = #2000000 1'b0;
+	ek22[1] = #2200000 1'b1;
+	ek22[1] = #200000 1'b0;
+end 
+// ek22[ 0 ]
+initial
+begin
+	ek22[0] = 1'b1;
+	ek22[0] = #2000000 1'b0;
+	ek22[0] = #3000000 1'b1;
+	ek22[0] = #1200000 1'b0;
+	ek22[0] = #300000 1'b1;
+end 
+// ek23[ 3 ]
+initial
+begin
+	ek23[3] = 1'b0;
+	ek23[3] = #1000000 1'b1;
+	ek23[3] = #3000000 1'b0;
+	ek23[3] = #2100000 1'b1;
+	ek23[3] = #300000 1'b0;
+end 
+// ek23[ 2 ]
+initial
+begin
+	ek23[2] = 1'b1;
+	ek23[2] = #4000000 1'b0;
+	ek23[2] = #1000000 1'b1;
+	ek23[2] = #1400000 1'b0;
+	ek23[2] = #100000 1'b1;
+end 
+// ek23[ 1 ]
+initial
+begin
+	ek23[1] = 1'b1;
+	ek23[1] = #3000000 1'b0;
+	ek23[1] = #1000000 1'b1;
+	ek23[1] = #2300000 1'b0;
+	ek23[1] = #100000 1'b1;
+end 
+// ek23[ 0 ]
+initial
+begin
+	ek23[0] = 1'b0;
+	ek23[0] = #2000000 1'b1;
+	ek23[0] = #1000000 1'b0;
+	ek23[0] = #1000000 1'b1;
+	ek23[0] = #2000000 1'b0;
+	ek23[0] = #200000 1'b1;
+	ek23[0] = #100000 1'b0;
+	ek23[0] = #100000 1'b1;
+end 
+// ek31[ 3 ]
+initial
+begin
+	ek31[3] = 1'b0;
+	ek31[3] = #3000000 1'b1;
+	ek31[3] = #1000000 1'b0;
+	ek31[3] = #1000000 1'b1;
+	ek31[3] = #1000000 1'b0;
+	ek31[3] = #300000 1'b1;
+	ek31[3] = #100000 1'b0;
+	ek31[3] = #100000 1'b1;
+end 
+// ek31[ 2 ]
+initial
+begin
+	ek31[2] = 1'b1;
+	ek31[2] = #1000000 1'b0;
+	ek31[2] = #2000000 1'b1;
+	ek31[2] = #2000000 1'b0;
+	ek31[2] = #1000000 1'b1;
+	ek31[2] = #100000 1'b0;
+	ek31[2] = #200000 1'b1;
+	ek31[2] = #200000 1'b0;
+end 
+// ek31[ 1 ]
+initial
+begin
+	ek31[1] = 1'b1;
+	ek31[1] = #1000000 1'b0;
+	ek31[1] = #2000000 1'b1;
+	ek31[1] = #1000000 1'b0;
+	ek31[1] = #2000000 1'b1;
+	ek31[1] = #100000 1'b0;
+	ek31[1] = #200000 1'b1;
+	ek31[1] = #100000 1'b0;
+end 
+// ek31[ 0 ]
+initial
+begin
+	ek31[0] = 1'b1;
+	ek31[0] = #3000000 1'b0;
+	ek31[0] = #1000000 1'b1;
+	ek31[0] = #2300000 1'b0;
+	ek31[0] = #100000 1'b1;
+end 
+// ek32[ 3 ]
+initial
+begin
+	ek32[3] = 1'b1;
+	ek32[3] = #5000000 1'b0;
+	ek32[3] = #1000000 1'b1;
+	ek32[3] = #500000 1'b0;
+end 
+// ek32[ 2 ]
+initial
+begin
+	ek32[2] = 1'b0;
+	ek32[2] = #1000000 1'b1;
+	ek32[2] = #1000000 1'b0;
+	ek32[2] = #1000000 1'b1;
+	ek32[2] = #1000000 1'b0;
+	ek32[2] = #1000000 1'b1;
+	ek32[2] = #1000000 1'b0;
+	ek32[2] = #100000 1'b1;
+	ek32[2] = #100000 1'b0;
+	ek32[2] = #100000 1'b1;
+	ek32[2] = #100000 1'b0;
+	ek32[2] = #100000 1'b1;
+end 
+// ek32[ 1 ]
+initial
+begin
+	ek32[1] = 1'b0;
+	ek32[1] = #1000000 1'b1;
+	ek32[1] = #1000000 1'b0;
+	ek32[1] = #1000000 1'b1;
+	ek32[1] = #2000000 1'b0;
+	ek32[1] = #1100000 1'b1;
+	ek32[1] = #100000 1'b0;
+	ek32[1] = #100000 1'b1;
+	ek32[1] = #200000 1'b0;
+end 
+// ek32[ 0 ]
+initial
+begin
+	ek32[0] = 1'b0;
+	ek32[0] = #2000000 1'b1;
+	ek32[0] = #3000000 1'b0;
+	ek32[0] = #1200000 1'b1;
+	ek32[0] = #300000 1'b0;
+end 
+// ek33[ 3 ]
+initial
+begin
+	ek33[3] = 1'b1;
+	ek33[3] = #1000000 1'b0;
+	ek33[3] = #2000000 1'b1;
+	ek33[3] = #1000000 1'b0;
+	ek33[3] = #2000000 1'b1;
+	ek33[3] = #100000 1'b0;
+	ek33[3] = #200000 1'b1;
+	ek33[3] = #100000 1'b0;
+end 
+// ek33[ 2 ]
+initial
+begin
+	ek33[2] = 1'b0;
+	ek33[2] = #3000000 1'b1;
+	ek33[2] = #1000000 1'b0;
+	ek33[2] = #2300000 1'b1;
+	ek33[2] = #100000 1'b0;
+end 
+// ek33[ 1 ]
+initial
+begin
+	ek33[1] = 1'b1;
+	ek33[1] = #1000000 1'b0;
+	ek33[1] = #3000000 1'b1;
+	ek33[1] = #2100000 1'b0;
+	ek33[1] = #300000 1'b1;
+end 
+// ek33[ 0 ]
+initial
+begin
+	ek33[0] = 1'b0;
+	ek33[0] = #1000000 1'b1;
+	ek33[0] = #2000000 1'b0;
+	ek33[0] = #1000000 1'b1;
+	ek33[0] = #1000000 1'b0;
+	ek33[0] = #1100000 1'b1;
+	ek33[0] = #200000 1'b0;
+	ek33[0] = #100000 1'b1;
+	ek33[0] = #100000 1'b0;
+end 
+
+key_inverter_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.ek11(ek11),
+	.ek12(ek12),
+	.ek13(ek13),
+	.ek21(ek21),
+	.ek22(ek22),
+	.ek23(ek23),
+	.ek31(ek31),
+	.ek32(ek32),
+	.ek33(ek33),
+	.sampler_tx(sampler)
+);
+
+key_inverter_vlg_check_tst tb_out(
+	.dk11(dk11),
+	.dk12(dk12),
+	.dk13(dk13),
+	.dk21(dk21),
+	.dk22(dk22),
+	.dk23(dk23),
+	.dk31(dk31),
+	.dk32(dk32),
+	.dk33(dk33),
+	.sampler_rx(sampler)
+);
+endmodule
+

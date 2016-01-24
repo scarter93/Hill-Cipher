@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "01/19/2016 16:13:36"
+// Generated on "01/24/2016 16:32:47"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    hill_cipher
 // 

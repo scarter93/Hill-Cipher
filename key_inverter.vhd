@@ -10,7 +10,7 @@
 -- This circuit is a mixed structural and behavorial implementation (LPM ROM for modulo-16 inverse)
 -- The circuit has a decent amount of delay as it has several operations
 -- 
--- Pipelining was attempted and used to allow next set of values to be entered during operations
+-- Pipelining was implemented and used to allow next set of values to be entered during  previous operations
 -- TODO: optimize to pipelining for all values (currently only works for final 3 entries)
 library ieee;
 use ieee.std_logic_1164.all;

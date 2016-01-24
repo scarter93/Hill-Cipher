@@ -3,7 +3,7 @@ $comment
 		vcd file HillCipher.msim.vcd -direction
 $end
 $date
-	Tue Jan 19 16:13:39 2016
+	Sun Jan 24 16:32:51 2016
 $end
 $version
 	ModelSim Version 10.1d
