@@ -1,6 +1,7 @@
 Please find the following files attached
 
 Lab1_260500858.pdf
+README.md
 
 src/hill_cipher.vhd
 src/key_inverter.vhd
