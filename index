@@ -1,14 +1,26 @@
-hill_cipher.vhd
-key_inverter.vhd
-key_loader.vhd
-key_loader_struct.vhd
-matrix_mult.vhd
-matrix_mult_struct.vhd
-vector_mult.vhd
-mux_loader.vhd
+Please find the following files attached
+
+Lab1_260500858.pdf
+
+src/hill_cipher.vhd
+src/key_inverter.vhd
+src/key_loader.vhd
+src/key_loader_struct.vhd
+src/matrix_mult.vhd
+src/matrix_mult_struct.vhd
+src/vector_mult.vhd
+src/mux_loader.vhd
 
 
-hill_cipher.vwf
-key_inverter.vwf
-key_loader.vwf
-matrix_multiplier.vwf
+simulation/hill_cipher.vwf
+simulation/key_inverter.vwf
+simulation/key_loader.vwf
+simulation/matrix_multiplier.vwf
+
+
+simulation_output/hill_cipher.sim.vwf
+simulation_output/key_inverter.sim.vwf
+simulation_output/key_loader.sim.vwf
+simulation_output/key_loader_struct.sim.vfw
+simulation_output/matrix_mult.sim.vwf
+simulation_output/matrix_mult_struct.sim.vwf
